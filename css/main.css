@@ -2353,7 +2353,14 @@ a.more-link:hover {
     }
 .textwidget img {
 	margin-bottom: 1em;
-    }
+	}
+.textwidget .demo-icon {
+	font-size: 18px;
+}
+
+.textwidget .demo-icon:hover {
+	color: black
+}
 
 /* rss widget */
 .widget_rss .rss-date,
