@@ -99,7 +99,7 @@ Main components
     /*padding-bottom: 100px;*/
   	}
   .is-card-open .card-layout .card {
-	  max-width: 700px;
+	  max-width: 780px;
 	  }
   .is-ajax-page-active .card-layout {
 	  padding-top: 0px;
@@ -113,7 +113,7 @@ Main components
 
   .card {
 	  max-width: 550px;
-  	}
+  }
 
   .card-intro {
     /* Force Hardware Acceleration in WebKit */
@@ -152,7 +152,8 @@ Main components
   }
 
   .card {
-	will-change : tranform, width;
+    cursor: pointer;
+	  will-change : tranform, width;
     margin-bottom: 0;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
@@ -222,7 +223,8 @@ Main components
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
-	Z-index: 100;
+    Z-index: 100;
+    cursor: default
   }
   .is-card-open .card::before {
 	  /*width: 97%; height: 99%;*/
