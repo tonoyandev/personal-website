@@ -1,9 +1,6 @@
+/* --------------------------------
 
-
-
-/* -------------------------------- 
-
-Main components 
+Main components
 
 -------------------------------- */
 .card-layout {
@@ -37,11 +34,11 @@ Main components
 .no-csstransforms3d .card::before {
   	display: none;
 	}
-.card-3d-right-side, 
+.card-3d-right-side,
 .card-3d-bottom-side {
   	display: none;
 	}
-.no-csstransforms3d .card-3d-right-side, 
+.no-csstransforms3d .card-3d-right-side,
 .no-csstransforms3d .card-3d-bottom-side {
   	display: none;
 	}
@@ -78,7 +75,7 @@ Main components
 
 /* DESKTOPS */
 @media only screen and (min-width: 992px) {
-	
+
   html.one-page-layout {
 	  overflow-x: hidden;
 	  }
@@ -113,11 +110,11 @@ Main components
     -moz-transition: -moz-transform 0.6s;
     transition: all 0.6s;
   }
-  
+
   .card {
-	  max-width: 550px; 
+	  max-width: 550px;
   	}
-	
+
   .card-intro {
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
@@ -153,7 +150,7 @@ Main components
     padding: 10px 0 44px;
     margin: 0;
   }
-  
+
   .card {
 	will-change : tranform, width;
     margin-bottom: 0;
@@ -182,7 +179,7 @@ Main components
     -moz-transition: -moz-transform 0.6s;
     transition: all 0.6s;
     -webkit-backface-visibility: hidden;
-     backface-visibility: hidden; 
+     backface-visibility: hidden;
   }
   .card:hover {
     -webkit-transform: rotateX(-58deg) rotateZ(-40deg) translateX(60px) translateY(290px);
@@ -200,16 +197,16 @@ Main components
     left: 0;
     width: 97%;
     height: 99%;
-	
+
     background: #F0F0F0;
 	box-shadow: 0 0 30px 20px #F0F0F0;
-	
+
     -webkit-transform-origin: center top;
     -moz-transform-origin: center top;
     -ms-transform-origin: center top;
     -o-transform-origin: center top;
     transform-origin: center top;
-	
+
     -webkit-transform: translateZ(-300px) translateX(-87%) translateY(570px);
     -moz-transform: translateZ(-300px) translateX(-87%) translateY(570px);
     -ms-transform: translateZ(-300px) translateX(-87%) translateY(570px);
@@ -235,9 +232,9 @@ Main components
     -o-transform: translateZ(-580px) translateX(10px) translateY(10px);
     transform: translateZ(-580px) translateX(10px) translateY(10px);
   }
-  
-  
-  .card-3d-right-side, 
+
+
+  .card-3d-right-side,
   .card-3d-bottom-side {
     display: block;
     position: absolute;
@@ -245,7 +242,7 @@ Main components
     /* Firefox bug - 3D CSS transform, jagged edges */
     outline: 1px solid transparent;
   }
-  .card-3d-right-side::after, 
+  .card-3d-right-side::after,
   .card-3d-bottom-side::after {
     /* darken the right/bottom sides */
     content: '';
@@ -294,8 +291,8 @@ Main components
   .card-3d-bottom-side::after {
     background-color: rgba(0, 0, 0, 0.4);
   }
-  
-  
+
+
   .close-card {
     display: block;
     position: fixed;
@@ -348,9 +345,9 @@ Main components
 
 /* IE 11 FIXES */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.card {	
+	.card {
     -webkit-backface-visibility: visible;
-     backface-visibility: visible; 
+     backface-visibility: visible;
 	}
   .card::before {
     transform: translateZ(-300px) translateX(-18%) translateY(170px)
@@ -369,23 +366,23 @@ Main components
 
 
 @media only screen and (min-width: 992px) and (min-height: 800px) {
-	
+
 	.card-intro {
 		top: 130px;
 		}
 	.card-layout {
 		padding-top: 130px;
 		}
-	
-	}	
+
+	}
 
 @media only screen and (min-width: 992px) and (min-height: 900px) {
-	
+
 	.card-intro {
 		top: 160px;
 		}
 	.card-layout {
 		padding-top: 200px;
 		}
-	
-	}	
+
+	}
