@@ -120,6 +120,8 @@
 .pw-icon-quote:before { content: '\e876'; } /* '' */
 .pw-icon-pin:before { content: '\e877'; } /* '' */
 .pw-icon-way:before { content: '\e878'; } /* '' */
+.pw-icon-rating:before { content: '\e879'; } /* '' */
+.pw-icon-upwork-icon:before { content: '\e87a'; } /* '' */
 .pw-icon-location-outline:before { content: '\e888'; } /* '' */
 .pw-icon-coffee:before { content: '\e88b'; } /* '' */
 .pw-icon-book-open:before { content: '\e88c'; } /* '' */
