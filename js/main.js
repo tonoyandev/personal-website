@@ -44,7 +44,6 @@
 		// ------------------------------
 		// ONE PAGE LAYOUT FUNCTIONS
 		if($('html').hasClass('one-page-layout')) {
-
 			// SET BG IMAGES
 			var bigImageUrl = $('.cover-media').data('image-url');
 			if(bigImageUrl !== undefined) {
@@ -787,17 +786,13 @@
 	}
 	// ------------------------------
 
-
-
 	// ------------------------------
 	// SET CURRENT MENU ITEM
 	function setCurrentMenuItem() {
 		var activePageId = ($.address.path());
 		// set default nav menu
 		if(activePageId !== "/") {
-			var newImage = activePageId.substr(1);
-			$(".cover .cover-media").removeClass("active");
-			$(".cover .cover-media[data-page='" + newImage + "']").addClass("active");
+			activateImageByPath();
 			$('.card-nav a[href="#' +  activePageId +'"]').parent().addClass('current_page_item').siblings().removeClass('current_page_item');
 		} else {
 			$('.card-nav li').removeClass('current_page_item');
@@ -855,7 +850,6 @@
 			//$("html, body").animate({ scrollTop: $('.card-nav').offset().top - 20 }, 400);
 		}
 
-
 		// only jquery get() returns remote page's <head> content
 		jQuery.get(url, function(data) {
 			$("html").addClass('is-ajax-page-loaded');
@@ -880,6 +874,13 @@
 				setTimeout(function() { setup(); }, 400);
 			});
 		});
+	}
+
+	// ------------------------------
+	function activateImageByPath() {
+		var newImage = ($.address.path()).substr(1);
+		$(".cover .cover-media").removeClass("active");
+		$(".cover .cover-media[data-page='" + newImage + "']").addClass("active");
 	}
 	// CLOSE PAGE
 	function closePage() {

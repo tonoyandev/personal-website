@@ -505,7 +505,9 @@ textarea,
 
 /* ONE PAGE LAYOUT */
 .cover {
-	position: relative; overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	height: 500px;
 	}
 /* card image mask */
 .cover:after,
@@ -707,11 +709,16 @@ textarea,
 		}
 
 	.cover-media {
-		padding: 0; height: 100vh;
+		padding: 0;
 		}
-	.is-ajax-page-active .cover-media {
-		padding: 0; height: 66vw !important;
-		}
+
+	html:not(.is-card-opened.nprogress-busy) .cover {
+		height: 100vh !important;
+	}
+
+	.cover {
+		height: 400px;
+	}
 
 	/* MENU */
 	.is-card-loaded .card-nav ul li {
@@ -765,10 +772,6 @@ textarea,
 	html.one-page-layout:not(.is-ajax-page-active) .card-nav {
 		bottom: 40px;
 		}
-	.is-ajax-page-active .cover-media {
-		padding: 0; height: 55vw !important;
-		}
-
 	}
 
 
@@ -783,13 +786,22 @@ textarea,
 	.card-nav ul li i {
 		font-size: 20px;
 		}
+	.cover {
+		height: 400px;
+		}
 }
 
 /* MOBILE LANDSCAPE */
 @media screen and (max-width: 991px) and (max-height: 500px) {
 
-	.is-ajax-page-active .cover-media {
-		height: 30vw !important;
+	.cover {
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cover {
+		height: 300px;
 		}
 }
 
