@@ -80,7 +80,7 @@
 
 				// Wind Reverse Sound Effect
 				if (soundEffects) {
-					windReverse.play();
+					startPlayback(windReverse);
 				}
 
 				closePage();
@@ -687,7 +687,7 @@
 
 				// Play Sound Effect
 				if (soundEffects) {
-					tick.play();
+					startPlayback(tick);
 				}
 
 				p.removeClass('animate-in animate-out').addClass('animate-in').show();
@@ -706,13 +706,13 @@
 		});
 	}
 
-	function hideProjectDetails(forever, safeClose) {
+  function hideProjectDetails(forever, safeClose) {
 
 		porftolioSingleJustClosed = true;
 
 		// Play Sound Effect
 		if (soundEffects) {
-			tick.play();
+			startPlayback(tick);
 		}
 
 		$('html').addClass('p-animating');
@@ -840,7 +840,7 @@
 
 				// Wind Sound Effect
 				if(soundEffects && !(isMobile()) ) {
-					wind.play();
+					startPlayback(wind);
 				}
 			}
 		}
@@ -853,13 +853,11 @@
 	// ------------------------------
 	// SHOW PAGE
 	function showPage(url) {
-		console.log(url);
-
 		showLoader();
 
 		// Play Sound Effect
 		if (soundEffects) {
-			tick.play();
+			startPlayback(tick);
 		}
 
 		/* OPEN PANEL : load and show new content */
@@ -876,21 +874,19 @@
 
 		// only jquery get() returns remote page's <head> content
 		jQuery.get(url, function(data) {
-
 			$("html").addClass('is-ajax-page-loaded');
 
 			// clear container content
 			cardContent.empty();
 
 			// elementor inline styles
-		  	cardContent.append($(data).filter('#elementor-frontend-inline-css'));
+		  cardContent.append($(data).filter('#elementor-frontend-inline-css'));
 			// elementor external styles
-		  	cardContent.append($(data).filter("link[id^='elementor-post-']"));
+		  cardContent.append($(data).filter("link[id^='elementor-post-']"));
 			cardContent.append($(data).find('.page-single > .hentry'));
 
 			// wait for images to be loaded
 			cardContent.imagesLoaded(function() {
-
 				hideLoader();
 				cardContent.removeClass('is-changing');
 				cardContent.addClass('is-loaded');
@@ -899,10 +895,7 @@
 				// fix masonry after card grow animation ended
 				setTimeout(function() { setup(); }, 400);
 			});
-
-
 		});
-
 	}
 
 	// CLOSE PAGE
@@ -916,8 +909,10 @@
 	}
 	// ------------------------------
 
-
-
-
+	function startPlayback(sound) {
+		return new Promise(function(resolve, reject) {
+			sound.play()
+		});
+	}
 
 })(jQuery);
