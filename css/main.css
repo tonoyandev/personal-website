@@ -712,7 +712,7 @@ textarea,
 		padding: 0;
 		}
 
-	html:not(.is-card-opened.nprogress-busy) .cover {
+	html:not(.is-card-opened) .cover {
 		height: 100vh !important;
 	}
 
@@ -917,8 +917,14 @@ html .process img {
 	margin: 1em 0 0; min-height: 60px;  text-align: center;
 	}
 	html .client img {
-		margin: 0 auto; width: auto; max-width: 60%; max-height: 46px;
-		}
+		margin: 0 auto;
+		width: auto;
+		max-width: 60%;
+		max-height: 46px;
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
+		transition: all 500ms;
+	}
 
 /* TIMELINE */
 .event {
