@@ -853,6 +853,7 @@
 	// ------------------------------
 	// SHOW PAGE
 	function showPage(url) {
+		console.log(url);
 
 		showLoader();
 
