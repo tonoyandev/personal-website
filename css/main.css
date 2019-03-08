@@ -934,8 +934,18 @@ html .process img {
         content : ""; position: absolute; top: 10px; bottom: -10px; left: 12px; width: 4px; background: #F9F9F9;
         }
     .event:after {
-        content : ""; position: absolute; top: 6px; left: 7px; width: 14px; height: 14px; border-radius: 50%; background: #f1f1f1;
-        }
+		content : "";
+		position: absolute;
+		top: 6px;
+		left: 7px;
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		background: #f1f1f1;
+		}
+	.event:nth-of-type(2):after {
+		animation: pulse 2s infinite;
+		}
 	.event:nth-of-type(2):after,
 	.elementor-widget:nth-of-type(2) .event:after {
         background-color: #4ECE99;
@@ -2867,3 +2877,30 @@ select:focus,
 		clip: rect(79px, 9999px, 58px, 0);
 	}
 }
+
+@-webkit-keyframes pulse {
+	0% {
+	  -webkit-box-shadow: 0 0 0 0 rgba(77, 206, 153, 0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 10px rgba(77, 206, 153, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(77, 206, 153, 0);
+	}
+  }
+
+@keyframes pulse {
+	0% {
+	  -moz-box-shadow: 0 0 0 0 rgba(77, 206, 153, 0.4);
+	  box-shadow: 0 0 0 0 rgba(77, 206, 153, 0.5);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 10px rgba(77, 206, 153, 0);
+		box-shadow: 0 0 0 10px rgba(77, 206, 153, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(77, 206, 153, 0);
+		box-shadow: 0 0 0 0 rgba(77, 206, 153, 0);
+	}
+  }
