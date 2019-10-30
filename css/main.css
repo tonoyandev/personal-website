@@ -1443,6 +1443,7 @@ screen and (max-height: 320px) {
 
 .service {
 	padding: 0.2em 0;
+    margin-bottom: 45px;
 }
 
 .service i,
@@ -1476,6 +1477,13 @@ screen and (max-height: 320px) {
 	font-weight: 400;
 	letter-spacing: .08em;
 	text-transform: uppercase;
+}
+
+.service .clearfix:after,
+.service .clearfix:before {
+	display: block;
+	content: '';
+	clear: both;
 }
 
 
@@ -1738,6 +1746,9 @@ html .client img {
 	margin-bottom: 0;
 }
 
+.event ul {
+	padding-left: 0
+}
 
 /* SKILLS */
 
@@ -4973,7 +4984,6 @@ a:hover {
 .pagination a:hover,
 .navigation a:hover,
 a.more-link:hover,
-.event:nth-of-type(2):after,
 .elementor-widget:nth-of-type(2) .event:after,
 .portfolio-nav a:hover,
 .skill-unit .bar .progress,
