@@ -8,7 +8,7 @@ seo:
 
 
 ---personal_info
-name: CARL HANSON
+name: Ararat Tonoyan
 images:
   - src: /about.jpg
     alt: my image
@@ -42,72 +42,10 @@ Let's super-charge your business today!
 ---skills_header
 title: I'm Specialized in
 list:
-  - Front-End Design
-  - Back-End Development
-  - Modern Frameworks
+  - Smart contracts
+  - Website development
+  - Research and analytics
 ---
-
-
-
----skills[0]
-title: Back-End Development
-list:
-  - title: Node.js
-    level: 1
-    icon:
-      src: /icons/nodedotjs.svg
-  - title: Prisma
-    level: 3
-    icon:
-      src: /icons/prisma.svg
-  - title: Svelte
-    level: 4
-    icon:
-      src: /icons/svelte.svg
-  - title: HTML5
-    level: 5
-    icon:
-      src: /icons/html5.svg
-  - title: Solidity
-    level: 2
-    icon:
-      src: /icons/solidity.svg
----
-
-
-
----skills[1]
-########################################
-### Skills
-########################################
-title: Front-End UI/UX Design
-list:
-  - title: JavaScript
-    level: 4
-    icon:
-      src: /icons/javascript.svg
-  - title: React
-    level: 3
-    icon:
-      src: /icons/react.svg
-  - title: Redux
-    level: 4
-    icon:
-      src: /icons/redux.svg
-  - title: GraphQL
-    level: 2
-    icon:
-      src: /icons/graphql.svg
-  - title: Node.js
-    level: 4
-    icon:
-      src: /icons/nodedotjs.svg
-  - title: Prisma
-    level: 5
-    icon:
-      src: /icons/prisma.svg
----
-
 
 
 ---history[0]

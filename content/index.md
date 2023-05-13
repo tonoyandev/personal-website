@@ -7,23 +7,29 @@ seo:
 
 ---main
 images:
-  - src: /hero.jpg
+  - src: /hero-2.png
     alt: my photo
   - src: /hero-mobile.jpg
     alt: my photo
 ---
 
-# <Typewriter>Carl Hanson</Typewriter>
+# <Typewriter>Ararat Tonoyan</Typewriter>
 
 # *Web Developer* <span>&</span> *Growth Consultant*
-
-<Sep size={12} />
 
 Sometimes five Imprimaturs are seen together dialogue-wise in the
 piazza of one title-page, complimenting and ducking each to other with
 their shaven reverences, whether the author, who stands by in
-perplexity at the foot of his epistle, shall to the press or to the
-sponge.
+perplexity at the foot of his epistle.
+
+```js {2-4} showLineNumbers
+const services = [
+  'UI/UX Design'
+  'Web Development'
+  'Mobile App Development'
+]
+if (have_a_project) navigate('/contact')
+```
 
 
 
@@ -34,6 +40,8 @@ sponge.
   text: Projects Completed
 - number: 5
   text: OpenSource Libraries
+- number: 50+
+  text: Happy Customers
 ---
 
 
@@ -44,10 +52,12 @@ sponge.
   Download Resume
 </Button>
 
+[Get in Touch](/contact)
+
 
 
 ---companies
-title: Trusted By
+title:
 list:
   - name: Company 1
     icon:

@@ -67,3 +67,19 @@ pre[class*='language-'] code[class*='language-'] {
   color: rgba(156, 163, 175, 0.3); /* Line number color */
   content: attr(line);
 }
+
+.dot-group button {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .2;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.dot-group [class*="selected"] {
+  cursor: default;
+  background-color: black;
+}
