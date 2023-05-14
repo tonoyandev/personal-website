@@ -112,10 +112,10 @@ export const siteMetaData = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'http://localhost:3000',
   authorName: 'Ararat Tonoyan',
   siteName: 'Ararat Tonoyan',
-  defaultTitle: 'Ararat Tonoyan Personal Site',
+  defaultTitle: 'Ararat Tonoyan: Blockchain Consultant & Web3 Expert',
   titleTemplate: 'Ararat Tonoyan | %s',
-  description: 'A short description goes here.',
-  email: 'hello@example.com',
+  description: 'Ararat Tonoyan: Top-rated blockchain consultant, Web3 and Ethereum expert. Providing cutting-edge blockchain development, consultancy, and audit services with a proven track record. Solving complex problems with innovative blockchain solutions.',
+  email: 'hello@tonoyan.dev',
   locale: 'en_US',
   twitter: {
     handle: '@handle',
