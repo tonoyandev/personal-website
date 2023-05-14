@@ -18,20 +18,22 @@ seo:
 
 ###### Solving problems
 
-I design products that are more than pretty. I make them shippable and usable.
-Et tempor non mollit dolor et do aute voluptate ea ullamco.
+With extensive experience in the blockchain sector and a knack for innovative problem-solving, I provide solutions that are not only effective but also tailored to your unique needs. I believe in the power of collaboration and clear communication, ensuring that we achieve your business goals together.
 
 ###### What you can expect
 
-- Design Strategy
-- Web and Mobile App Design
-- Front-end Development
+- Consulting
+- Development
+- WEB3 & Smart Contracts
+- Audit and PenTest
 
 ###### Applications I'm fluent in
 
-- Design Strategy
-- Web and Mobile App Design
-- Front-end Development
+- Web3 JS
+- Solidity
+- React JS
+- Node JS
+- Microservices
 
 <Sep size="12" />
 
@@ -42,69 +44,65 @@ Et tempor non mollit dolor et do aute voluptate ea ullamco.
 
 
 ---services[0]
-title: Web and Mobile App Design
+title: Consulting
 icon:
-  src: /icons/mobile-app.svg
+  src: /icons/graphql.svg
 ---
 
 <small>
-  Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et
-  do aute voluptate ea ullamco culpa pariatur.
+  I offer expert advice, guiding you through the complexities of blockchain technology and its applications.
 
-    - <strong>Design Strategy</strong>
-    - <strong>Web and Mobile App Design</strong>
-    - <strong>Front-end Development</strong>
-
+    - <strong>Assess Needs</strong>
+    - <strong>Provide Insights</strong>
+    - <strong>Strategy Development</strong>
 </small>
 
 
 
 ---services[1]
-title: Project Strategy & Development
+title: Development
 icon:
   src: /icons/prisma.svg
 ---
 
 <small>
-  Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et
-  do aute voluptate ea ullamco culpa pariatur.
+  With a focus on your unique requirements, I develop blockchain systems that deliver on functionality and efficiency.
 
-    - <strong>Design Strategy</strong>
-    - <strong>Web and Mobile App Design </strong>
-    - <strong>Front-end Development</strong>
-
+    - <strong>Custom Design</strong>
+    - <strong>Efficient Coding</strong>
+    - <strong>System Integration</strong>
 </small>
 
 
 
 ---services[2]
-title: UI/UX Design & Optimization
+title: WEB3 & Smart Contracts
 icon:
   src: /icons/dashboard.svg
 ---
 
 <small>
-  Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et
-  do aute voluptate ea ullamco culpa pariatur.
+  I harness the power of Web3 and smart contracts to build innovative, secure, and user-friendly decentralized applications.
 
-    - <strong>Design Strategy</strong>
-    - <strong>Web and Mobile App Design</strong>
-    - <strong>Front-end Development</strong>
+    - <strong>Requirements Gathering</strong>
+    - <strong>Smart Contract Creation</strong>
+    - <strong>DApp Integration</strong>
+    - <strong>Testing and Deployment</strong>
 </small>
 
 
 
 ---services[3]
-title: Application Audit & Debugging
+title: Audit and Debugging
 icon:
   src: /icons/audit.svg
 ---
 
 <small>
-  Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et
-  do aute voluptate ea ullamco culpa pariatur.
+   I ensure the resilience of your systems with thorough audits and penetration tests, safeguarding your blockchain solutions.
 
-  - <strong>Design Strategy </strong>
-  - <strong>Web and Mobile App Design </strong>
-  - <strong>Front-end Development</strong>
+  - <strong>Optimising and Scalability</strong>
+  - <strong>Comprehensive Auditing </strong>
+  - <strong>Penetration Testing</strong>
+  - <strong>Security Enhancement</strong>
 </small>
