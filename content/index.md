@@ -17,7 +17,7 @@ images:
 
 # *Code Guru* <span>&</span> *Blockchain Expert*
 
-When it comes to the intricate world of distributed ledger technology, you can think of me as a lighthouse in the thick fog of complexity. I'm here to help you navigate the ever-evolving blockchain landscape with ease and confidence.
+Welcome to my website! When it comes to the intricate world of distributed ledger technology, you can think of me as a lighthouse in the thick fog of complexity. I'm here to help you navigate the ever-evolving blockchain landscape with ease and confidence.
 
 ```js {2-5} showLineNumbers
 const services = [
