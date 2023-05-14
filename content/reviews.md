@@ -9,7 +9,36 @@ seo:
 collection:
   path: /reviews
   sortBy: date
-upwork:
+---
+
+<PageTitle>
+### Reviews
+</PageTitle>
+
+Welcome to the testimonials section of my website, where my clients do the talking. Here, you'll find authentic feedback that paints a picture of my commitment to delivering top-notch blockchain solutions.
+
+![Top Rated Developer On Upwork.com](/reviews/banner/Top-banner.png)
+
+
+As you can see from the header image above, I'm proud to be a top-rated freelancer on Upwork, boasting a stellar track record of 60 successful job wins. This achievement is not just a statistic; it's a testament to the trust that my clients place in me and the consistent quality of my work.
+
+##### Awards & Recognition
+
+As further proof of my expertise, I'm honored to have been recognized as one of the top 27 freelancers for solidity and smart contracts in May 2020. This recognition underscores my extensive knowledge and experience in these crucial areas of blockchain development.
+
+<div className="m-0 grid grid-rows-1 gap-4 sm:grid-cols-2 sm:grid-rows-none not-prose">
+  ![Top 27 Smart Contract Developer Upwork](/reviews/banner/Top-27-Smart-Contract-Dev-Upwork.jpg)
+  ![Top 27 Solidity Developer Upwork](/reviews/banner/Top-27-Solidity-Dev-Upwork.jpg)
+</div>
+
+These testimonials and recognitions are not just accolades; they are commitments that I make to every new client. Commitments to quality, reliability, and innovative solutions tailored to your unique needs. So, let's start a conversation about how I can bring your blockchain vision to life!
+
+
+##### Client Feedback
+
+Beneath this, you'll find a selection of genuine client testimonials. These comments are a reflection of my dedication to my craft, my commitment to meeting deadlines, and my zeal for exceeding client expectations. As you read through these reviews, you'll see common themes of reliability, professionalism, and exceptional blockchain expertise.
+
+---upwork
   - src: /reviews/upwork/Ararat-Tonoyan-feedback-1.png
     alt: Ararat-Tonoyan-feedback-1
   - src: /reviews/upwork/Ararat-Tonoyan-feedback-2.png
@@ -102,25 +131,5 @@ upwork:
     alt: Ararat-Tonoyan-feedback-45
   - src: /reviews/upwork/Ararat-Tonoyan-feedback-46.png
     alt: Ararat-Tonoyan-feedback-46
-banners:
-  - src: /reviews/banner/Top-banner.png
-    alt: Upwork Top Blockchain Developer Ararat Tonoyan
-  - src: /reviews/banner/Top-27-Smart-Contract-Dev-Upwork.jpg
-    alt: Top 27 Smart Contract Developer Upwork Ararat Tonoyan
-  - src: /reviews/banner/Top-27-Solidity-Dev-Upwork.jpg
-    alt: Top 27 Solidity Developer Upwork Ararat Tonoyan
-linkedin:
-  - src: /reviews/linkedin/1.png
-    alt: Stefano Actis (Quantnet) Feedback
-  - src: /reviews/linkedin/2.png
-    alt: Ludmila Shulgina (Quantnet) Feedback
-  - src: /reviews/linkedin/3.png
-    alt: Soheeb Aziz (Leios) feedback
 ---
 
-
-<PageTitle>
-  ### Reviews
-</PageTitle>
-
-I have transformed ideas into remarkable digital products.

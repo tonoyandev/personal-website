@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'clsx'
-import { ImageWithZoom, CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
+import { Image, CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 const ImageCarousel = (props) => {
@@ -31,8 +31,8 @@ const ImageCarousel = (props) => {
   return (
     <CarouselProvider
       className={classNames('relative', className)}
-      visibleSlides={isMobile ? 2 : 4}
-      step={isMobile ? 2 : 4}
+      visibleSlides={isMobile ? 1 : 3}
+      step={isMobile ? 1 : 3}
       totalSlides={images.length}
       naturalSlideWidth={440}
       naturalSlideHeight={300}
@@ -43,7 +43,7 @@ const ImageCarousel = (props) => {
       <Slider>
         {images.map((image, i) => (
           <Slide key={i} className="cursor-pointer">
-            <ImageWithZoom
+            <Image
               src={image.src}
               alt={image.alt}
               className="m-0 h-auto w-full object-contain object-center"
