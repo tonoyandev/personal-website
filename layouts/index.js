@@ -8,6 +8,7 @@ const layouts = {
   Post: dynamic(() => import(`@/layouts/Post`)),
   Blog: dynamic(() => import(`@/layouts/Blog`)),
   Projects: dynamic(() => import(`@/layouts/Projects`)),
+  Reviews: dynamic(() => import(`@/layouts/Reviews`)),
   Fallback: dynamic(() => import(`@/layouts/Fallback`)),
   Blank: dynamic(() => import(`@/layouts/Blank`)),
   BlankCentered: dynamic(() => import(`@/layouts/BlankCenter`)),

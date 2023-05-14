@@ -38,8 +38,8 @@ export const menu = [
     Icon: TfiPencilAlt,
   },
   {
-    name: 'Projects',
-    slug: '/projects',
+    name: 'Reviews',
+    slug: '/reviews',
     Icon: SlTrophy,
   },
   {
@@ -61,7 +61,7 @@ export const social = [
   },
   {
     name: 'Telegram',
-    url: 'https://www.linkedin.com/',
+    url: 'https://www.t.me/',
     Icon: SiTelegram,
   }
 ]

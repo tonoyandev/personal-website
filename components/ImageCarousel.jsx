@@ -1,15 +1,16 @@
 import React from 'react'
-import { Image , CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
+import classNames from 'clsx'
+import { ImageWithZoom, CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 const ImageCarousel = (props) => {
-  const { images } = props
+  const { images, className } = props
   const [isMobile, setIsMobile] = React.useState(false)
 
   React.useEffect(() => {
-    // Ensure window object is defined
+    // Check if window is defined (i.e., we're on the client side, not server side)
     if (typeof window !== 'undefined') {
-      const checkIsMobile = () => window.innerWidth < 640
+      const checkIsMobile = () => window.innerWidth <= 640
       setIsMobile(checkIsMobile())
 
       const handleResize = () => {
@@ -18,21 +19,23 @@ const ImageCarousel = (props) => {
 
       window.addEventListener('resize', handleResize)
 
+      // Cleanup on unmount
       return () => {
         window.removeEventListener('resize', handleResize)
       }
     }
   }, [])
+
   if (!images || !images.length) return null
 
   return (
     <CarouselProvider
-      visibleSlides={isMobile ? 1 : 3}
-      step={isMobile ? 1 : 3}
+      className={classNames('relative', className)}
+      visibleSlides={isMobile ? 2 : 4}
+      step={isMobile ? 2 : 4}
       totalSlides={images.length}
-      naturalSlideWidth={720}
-      naturalSlideHeight={320}
-      isIntrinsicHeight
+      naturalSlideWidth={440}
+      naturalSlideHeight={300}
       hasMasterSpinner
       infinite
       isPlaying
@@ -40,15 +43,15 @@ const ImageCarousel = (props) => {
       <Slider>
         {images.map((image, i) => (
           <Slide key={i} className="cursor-pointer">
-            <Image
+            <ImageWithZoom
               src={image.src}
               alt={image.alt}
-              className="m-0 object-contain object-center pr-1"
+              className="m-0 h-auto w-full object-contain object-center"
             />
           </Slide>
         ))}
       </Slider>
-      <DotGroup className="dot-group  hidden text-center sm:block" />
+      <DotGroup className="dot-group hidden text-center sm:block" />
     </CarouselProvider>
   )
 }

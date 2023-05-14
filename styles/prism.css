@@ -81,5 +81,5 @@ pre[class*='language-'] code[class*='language-'] {
 
 .dot-group [class*="selected"] {
   cursor: default;
-  background-color: black;
+  opacity: 0.6;
 }
