@@ -8,7 +8,7 @@ const Companies = ({ title, list }) => (
     {list &&
       list.map(({ icon }, i) => (
         <Reveal key={i} animation="fade-in zoom-in" delay={i * 250}>
-          {icon && <Icon {...icon} className="h-12 w-36 fill-current text-omega-500" />}
+          {icon && <Icon {...icon} className="h-12 w-36 fill-current text-omega-500 opacity-50" />}
         </Reveal>
       ))}
   </div>

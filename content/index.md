@@ -15,18 +15,16 @@ images:
 
 # <Typewriter>Ararat Tonoyan</Typewriter>
 
-# *Web Developer* <span>&</span> *Growth Consultant*
+# *Code Guru* <span>&</span> *Blockchain Expert*
 
-Sometimes five Imprimaturs are seen together dialogue-wise in the
-piazza of one title-page, complimenting and ducking each to other with
-their shaven reverences, whether the author, who stands by in
-perplexity at the foot of his epistle.
+When it comes to the intricate world of distributed ledger technology, you can think of me as a lighthouse in the thick fog of complexity. I'm here to help you navigate the ever-evolving blockchain landscape with ease and confidence.
 
-```js {2-4} showLineNumbers
+```js {2-5} showLineNumbers
 const services = [
-  'UI/UX Design'
-  'Web Development'
-  'Mobile App Development'
+  'Consulting',
+  'Development',
+  'WEB3 & Smart Contracts',
+  'Audit and PenTest'
 ]
 if (have_a_project) navigate('/contact')
 ```
@@ -34,14 +32,14 @@ if (have_a_project) navigate('/contact')
 
 
 ---achievements
-- number: 6+
+- number: 8+
   text: Years of experience
-- number: 60+
-  text: Projects Completed
-- number: 5
-  text: OpenSource Libraries
-- number: 50+
-  text: Happy Customers
+- number: 220+
+  text: Deployed contracts
+- number: 62
+  text: Happy customers
+- number: 100+
+  text: Projects completed
 ---
 
 
@@ -59,16 +57,13 @@ if (have_a_project) navigate('/contact')
 ---companies
 title:
 list:
-  - name: Company 1
+  - name: Upwork
     icon:
-      src: /icons/logo-1.svg
-  - name: Company 2
+      src: /companies/upwork.svg
+  - name: OpenZeppelin
     icon:
-      src: /icons/logo-3.svg
-  - name: Company 3
+      src: /companies/oz.svg
+  - name: DAO Maker
     icon:
-      src: /icons/logo-3.svg
-  - name: Company 4
-    icon:
-      src: /icons/logo-4.svg
+      src: /companies/dao_maker.svg
 ---
