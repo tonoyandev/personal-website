@@ -2,12 +2,12 @@
 layout: Post
 title: Calculating and Optimizing Transaction Costs in Solidity
 description: As Solidity developers, we need to understand how to calculate these costs and optimize them to ensure that our dApps are not only functional but also economically efficient.
-date: '2023-5-18'
+date: '2023-05-01'
 tags:
   - ethereum
 images:
   - src: /photos/blog-optimizing-transaction-costs-in-solidity.png
-    alt: blog-optimizing-transaction-costs-in-solidity
+    alt: optimizing-transaction-costs-in-solidity
 featured: true
 ---
 

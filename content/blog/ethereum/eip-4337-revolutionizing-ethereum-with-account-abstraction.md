@@ -2,12 +2,12 @@
 layout: Post
 title: EIP-4337 Explained
 description: EIP-4337 is an Ethereum Improvement Proposal (EIP) that defines a new account abstraction mechanism for Ethereum (EVM) blockchains. It allows for the creation of a single account type that can be used to both transact and create contracts.
-date: '2023-3-19'
+date: '2023-03-19'
 tags:
   - ethereum
 images:
   - src: /photos/blog-eip-4337.png
-    alt: blog-eip-4337
+    alt: eip-4337
 featured: true
 ---
 

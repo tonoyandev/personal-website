@@ -2,12 +2,12 @@
 layout: Post
 title: Smart Contracts 2.0 - Exploring Upgradable Contracts on Ethereum
 description: While smart contracts have revolutionized the way we interact with blockchain, their immutability has posed a challenge for developers who need to update or upgrade their contracts.
-date: '2022-3-29'
+date: '2023-04-03'
 tags:
   - ethereum
 images:
   - src: /photos/blog-smart-contracts-2.0.png
-    alt: blog-smart-contracts-2.0
+    alt: smart-contracts-2.0
 featured: true
 ---
 # Smart Contracts 2.0: Exploring Upgradable Contracts on Ethereum

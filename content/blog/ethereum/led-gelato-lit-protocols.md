@@ -2,12 +2,12 @@
 layout: Post
 title: Using Web3 Functions - LED by Chainlink, Gelato, and Lit Protocol
 description: We'll explore some fascinating Web3 functions, brought to you by the likes of Chainlink, Gelato, and Lit protocol. Get ready for some fun, laughter, and... yes, code. Lots of code.
-date: '2023-5-18'
+date: '2023-05-15'
 tags:
   - ethereum
 images:
   - src: /photos/blog-led-gelato-lit-protocols.png
-    alt: blog-led-gelato-lit-protocols
+    alt: led-gelato-lit-protocols
 featured: true
 ---
 

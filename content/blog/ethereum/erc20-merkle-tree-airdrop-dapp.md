@@ -1,13 +1,13 @@
 ---
 layout: Post
 title: So, You Want to Build an ERC20 Merkle Tree Airdrop Dapp?
-description: 
-date: '2023-5-17'
+description: Ever woken up one fine morning and thought to yourself, "Oh, I wish I could build an ERC20 Merkle Tree Airdrop Dapp today"? No? Just me? Well, if you're still here, I'll assume you're mildly interested. Strap in, because we're about to embark on a roller coaster of JavaScript, Solidity, and some good ol' crypto jargon!
+date: '2023-05-08'
 tags:
   - ethereum
 images:
   - src: /photos/blog-erc20-merkle-tree-airdrop-dapp.png
-    alt: blog-erc20-merkle-tree-airdrop-dapp
+    alt: erc20-merkle-tree-airdrop-dapp
 featured: true
 ---
 
