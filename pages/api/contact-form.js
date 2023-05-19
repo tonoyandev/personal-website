@@ -3,10 +3,18 @@
  * will be treated as an API endpoint instead of a page.        *
  ****************************************************************/
 
-import sendgrid from '@sendgrid/mail'
+import nodemailer from 'nodemailer'
 import { config } from '../../theme.config'
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+const transporter = nodemailer.createTransport({
+  host: 'mail.tonoyan.dev', // replace with your SMTP server
+  port: 465, // use 465 for SSL
+  secure: true, // true for 465, false for other ports
+  auth: {
+    user: 'hi@tonoyan.dev', // your cPanel email
+    pass: process.env.MAILSERVER_PASSWORD, // your cPanel password
+  },
+})
 
 const contact = async (req, res) => {
   const { email } = req.body
@@ -53,13 +61,15 @@ const contact = async (req, res) => {
   }
 
   try {
-    await sendgrid.send({
+    const mailOptions = {
       to: recipient, // Your email where you'll receive emails
       from: recipient, // your website email address here
       replyTo: email,
       subject: req.body.subject || subject || 'Contact form entry',
       html,
-    })
+    };
+
+    await transporter.sendMail(mailOptions)
   } catch (error) {
     return res.status(error.statusCode || 500).json({ error: error.message })
   }
