@@ -39,97 +39,97 @@ These testimonials and recognitions are not just accolades; they are commitments
 Beneath this, you'll find a selection of genuine client testimonials. These comments are a reflection of my dedication to my craft, my commitment to meeting deadlines, and my zeal for exceeding client expectations. As you read through these reviews, you'll see common themes of reliability, professionalism, and exceptional blockchain expertise.
 
 ---upwork
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-1.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-1.jpg
     alt: Ararat-Tonoyan-feedback-1
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-2.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-2.jpg
     alt: Ararat-Tonoyan-feedback-2
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-3.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-3.jpg
     alt: Ararat-Tonoyan-feedback-3
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-4.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-4.jpg
     alt: Ararat-Tonoyan-feedback-4
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-5.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-5.jpg
     alt: Ararat-Tonoyan-feedback-5
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-6.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-6.jpg
     alt: Ararat-Tonoyan-feedback-6
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-7.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-7.jpg
     alt: Ararat-Tonoyan-feedback-7
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-8.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-8.jpg
     alt: Ararat-Tonoyan-feedback-8
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-9.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-9.jpg
     alt: Ararat-Tonoyan-feedback-9
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-10.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-10.jpg
     alt: Ararat-Tonoyan-feedback-10
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-11.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-11.jpg
     alt: Ararat-Tonoyan-feedback-11
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-12.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-12.jpg
     alt: Ararat-Tonoyan-feedback-12
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-13.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-13.jpg
     alt: Ararat-Tonoyan-feedback-13
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-14.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-14.jpg
     alt: Ararat-Tonoyan-feedback-14
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-15.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-15.jpg
     alt: Ararat-Tonoyan-feedback-15
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-16.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-16.jpg
     alt: Ararat-Tonoyan-feedback-16
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-17.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-17.jpg
     alt: Ararat-Tonoyan-feedback-17
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-18.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-18.jpg
     alt: Ararat-Tonoyan-feedback-18
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-19.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-19.jpg
     alt: Ararat-Tonoyan-feedback-19
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-20.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-20.jpg
     alt: Ararat-Tonoyan-feedback-20
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-21.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-21.jpg
     alt: Ararat-Tonoyan-feedback-21
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-22.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-22.jpg
     alt: Ararat-Tonoyan-feedback-22
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-23.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-23.jpg
     alt: Ararat-Tonoyan-feedback-23
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-24.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-24.jpg
     alt: Ararat-Tonoyan-feedback-24
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-25.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-25.jpg
     alt: Ararat-Tonoyan-feedback-25
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-26.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-26.jpg
     alt: Ararat-Tonoyan-feedback-26
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-27.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-27.jpg
     alt: Ararat-Tonoyan-feedback-27
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-28.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-28.jpg
     alt: Ararat-Tonoyan-feedback-28
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-29.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-29.jpg
     alt: Ararat-Tonoyan-feedback-29
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-30.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-30.jpg
     alt: Ararat-Tonoyan-feedback-30
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-31.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-31.jpg
     alt: Ararat-Tonoyan-feedback-31
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-32.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-32.jpg
     alt: Ararat-Tonoyan-feedback-32
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-33.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-33.jpg
     alt: Ararat-Tonoyan-feedback-33
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-34.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-34.jpg
     alt: Ararat-Tonoyan-feedback-34
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-35.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-35.jpg
     alt: Ararat-Tonoyan-feedback-35
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-36.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-36.jpg
     alt: Ararat-Tonoyan-feedback-36
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-37.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-37.jpg
     alt: Ararat-Tonoyan-feedback-37
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-38.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-38.jpg
     alt: Ararat-Tonoyan-feedback-38
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-39.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-39.jpg
     alt: Ararat-Tonoyan-feedback-39
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-40.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-40.jpg
     alt: Ararat-Tonoyan-feedback-40
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-41.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-41.jpg
     alt: Ararat-Tonoyan-feedback-41
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-42.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-42.jpg
     alt: Ararat-Tonoyan-feedback-42
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-43.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-43.jpg
     alt: Ararat-Tonoyan-feedback-43
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-44.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-44.jpg
     alt: Ararat-Tonoyan-feedback-44
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-45.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-45.jpg
     alt: Ararat-Tonoyan-feedback-45
-  - src: /reviews/upwork/Ararat-Tonoyan-feedback-46.png
+  - src: /reviews/upwork/Ararat-Tonoyan-feedback-46.jpg
     alt: Ararat-Tonoyan-feedback-46
 ---
 
