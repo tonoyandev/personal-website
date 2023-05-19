@@ -102,7 +102,7 @@ const Newsletter = ({ className }) => {
               disabled={isSubmitting}
               type="text"
               name="email"
-              placeholder="HamboAPI@example.com"
+              placeholder="hi@example.com"
               aria-label="email address"
               hasError={errors.email || errors.service}
               {...register('email', {

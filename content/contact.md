@@ -27,5 +27,7 @@ Use the form on this page or get in touch by other means.
 
   <Icon src="/icons/logo-linkedin.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Linkedin: [tonoyandev](https://www.linkedin.com/in/tonoyandev/)
 
-  <Icon src="/icons/logo-telegram.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Telegram: [@tonoyandev](https://t.me/tonoyandev)
+  <Icon src="/icons/logo-telegram.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Telegram: [tonoyandev](https://t.me/tonoyandev)
+
+  <Icon src="/icons/logo-github.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Github: [tonoyandev](https://github.com/tonoyandev)
 </small>

@@ -16,4 +16,5 @@ module.exports = withBundleAnalyzer({
     })
     return config
   },
+  output: 'standalone'
 })

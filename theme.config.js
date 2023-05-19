@@ -55,14 +55,14 @@ export const menu = [
 
 export const social = [
   {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/',
-    Icon: IoLogoLinkedin,
+    name: 'Telegram',
+    url: 'https://www.t.me/tonoyandev',
+    Icon: SiTelegram,
   },
   {
-    name: 'Telegram',
-    url: 'https://www.t.me/',
-    Icon: SiTelegram,
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/tonoyandev/',
+    Icon: IoLogoLinkedin,
   }
 ]
 

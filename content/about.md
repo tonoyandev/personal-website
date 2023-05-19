@@ -53,10 +53,11 @@ Let's super-charge your business today!
 ---skills_header
 title: I'm Specialized in
 list:
-  - Smart contracts
-  - Full stack development
-  - Research and analytics
-  - Audit and security
+  - Smart Contracts
+  - Web Development
+  - Research
+  - Analytics
+  - Quality Audit
 ---
 
 
@@ -78,7 +79,7 @@ list:
   - name: Doctornet.PRO
     description: Frontend developer, created professional material-design dashboards for clients, developed custom UI solutions related to client business model, conducted offline seminars for developers to increase performance and motivation.
     date: 2016
-  - name: St-Dev.com
+  - name: St-Dev
     description: Frontend developer, developed UI interfaces and business logic in web applications.
     date: 2014-2016
 ---

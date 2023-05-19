@@ -10,8 +10,8 @@ import {
   EmailIcon,
   WhatsappShareButton,
   WhatsappIcon,
-  PocketShareButton,
-  PocketIcon,
+  TelegramShareButton,
+  TelegramIcon,
 } from 'next-share'
 
 const SocialShare = (props) => {
@@ -39,9 +39,9 @@ const SocialShare = (props) => {
       <WhatsappShareButton url={url} title={quote} separator=":: ">
         <WhatsappIcon size={size} round={round} />
       </WhatsappShareButton>
-      <PocketShareButton url={url} title={'Next Share'}>
-        <PocketIcon size={size} round={round} />
-      </PocketShareButton>
+      <TelegramShareButton url={url} title={'Tonoyan.DEV Article'}>
+        <TelegramIcon size={size} round={round} />
+      </TelegramShareButton>
       <EmailShareButton url={url} subject={quote} body="body">
         <EmailIcon size={size} round={round} />
       </EmailShareButton>

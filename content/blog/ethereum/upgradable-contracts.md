@@ -22,21 +22,21 @@ The concept of upgradable smart contracts involves separating the contract's log
 
 ## Advantages of Upgradable Smart Contracts
 
-1. **Bug fixes:** If there are any bugs or vulnerabilities discovered in a smart contract, upgradable contracts allow developers to fix them by deploying an updated version.
+1 - **Bug fixes:** If there are any bugs or vulnerabilities discovered in a smart contract, upgradable contracts allow developers to fix them by deploying an updated version.
 
-2. **Feature enhancements:** Developers can add new features and functionality to their contracts as needed, improving the overall utility of the smart contract.
+2 - **Feature enhancements:** Developers can add new features and functionality to their contracts as needed, improving the overall utility of the smart contract.
 
-3. **Reduced risks:** The ability to upgrade contracts provides a safety net for developers, reducing the risks associated with deploying faulty or incomplete code.
+3 - **Reduced risks:** The ability to upgrade contracts provides a safety net for developers, reducing the risks associated with deploying faulty or incomplete code.
 
-4. **Protocol upgrades:** As the Ethereum network evolves, upgradable contracts can be adapted to new changes and improvements in the underlying protocols.
+4 - **Protocol upgrades:** As the Ethereum network evolves, upgradable contracts can be adapted to new changes and improvements in the underlying protocols.
 
 ## Challenges of Upgradable Smart Contracts
 
-1. **Increased complexity:** Implementing upgradable smart contracts requires additional planning and development effort, as well as a solid understanding of the proxy pattern and storage management.
+1 - **Increased complexity:** Implementing upgradable smart contracts requires additional planning and development effort, as well as a solid understanding of the proxy pattern and storage management.
 
-2. **Centralization risks:** Upgradable contracts may introduce centralization risks if the upgrade process is controlled by a single entity or a small group, potentially undermining the trustless nature of blockchain.
+2 - **Centralization risks:** Upgradable contracts may introduce centralization risks if the upgrade process is controlled by a single entity or a small group, potentially undermining the trustless nature of blockchain.
 
-3. **Gas costs:** Delegating calls through a proxy contract can increase gas costs, making interactions with the smart contract more expensive for users.
+3 - **Gas costs:** Delegating calls through a proxy contract can increase gas costs, making interactions with the smart contract more expensive for users.
 
 ## Implementing Upgradable Smart Contracts
 
@@ -118,10 +118,10 @@ In this example, when you want to upgrade the `Implementation` contract, you dep
 
 ## Solutions to Upgradable Smart Contract Challenges
 
-1. **Minimizing complexity:** The use of well-established patterns and libraries, like OpenZeppelin's Upgrades Plugins, can help minimize the complexity of implementing upgradable contracts.
+1 - **Minimizing complexity:** The use of well-established patterns and libraries, like OpenZeppelin's Upgrades Plugins, can help minimize the complexity of implementing upgradable contracts.
 
-2. **Mitigating centralization risks:** The upgrade process can be controlled by a decentralized autonomous organization (DAO) or a multisig wallet to prevent any single entity from unilaterally changing the contract.
+2 - **Mitigating centralization risks:** The upgrade process can be controlled by a decentralized autonomous organization (DAO) or a multisig wallet to prevent any single entity from unilaterally changing the contract.
 
-3. **Optimizing gas costs:** Careful contract design and optimization techniques can help mitigate the increase in gas costs.
+3 - **Optimizing gas costs:** Careful contract design and optimization techniques can help mitigate the increase in gas costs.
 
 In conclusion, upgradable smart contracts provide a powerful way to manage and improve smart contracts post-deployment. They can mitigate risks, allow for continuous improvement, and adapt to changes in the underlying blockchain protocol. However, they also come with their own set of challenges, which need to be carefully managed to fully reap their benefits.
