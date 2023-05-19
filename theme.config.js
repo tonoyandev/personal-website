@@ -115,7 +115,7 @@ export const siteMetaData = {
   defaultTitle: 'Ararat Tonoyan: Blockchain Consultant & Web3 Expert',
   titleTemplate: 'Ararat Tonoyan | %s',
   description: 'Ararat Tonoyan: Top-rated blockchain consultant, Web3 and Ethereum expert. Providing cutting-edge blockchain development, consultancy, and audit services with a proven track record. Solving complex problems with innovative blockchain solutions.',
-  email: 'hello@tonoyan.dev',
+  email: 'hi@tonoyan.dev',
   locale: 'en_US',
   twitter: {
     handle: '@handle',

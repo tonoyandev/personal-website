@@ -23,9 +23,9 @@ Use the form on this page or get in touch by other means.
 <Sep size="12" />
 
 <small>
-  <Icon src="/icons/mail.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Email: hello@tonoyan.dev
+  <Icon src="/icons/mail.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Email: hi@tonoyan.dev
 
-  <Icon src="/icons/logo-linkedin.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Linkedin: [aaaDevelopment](https://www.linkedin.com/in/aaadevelopment/)
+  <Icon src="/icons/logo-linkedin.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Linkedin: [tonoyandev](https://www.linkedin.com/in/tonoyandev/)
 
-  <Icon src="/icons/logo-telegram.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Telegram: [@aaaDevelopment](https://t.me/aaadevelopment)
+  <Icon src="/icons/logo-telegram.svg" className="mr-2 inline align-middle fill-current text-omega-500" /> Telegram: [@tonoyandev](https://t.me/tonoyandev)
 </small>

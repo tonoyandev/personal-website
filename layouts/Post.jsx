@@ -9,7 +9,7 @@ import ImageGallery from '@/components/ImageGallery'
 import Sep from '@/components/Sep'
 import Newsletter from '@/components/Newsletter'
 import { siteMetaData } from '../theme.config'
-import authorImage from '../public/author-profile-picture.jpg'
+import authorImage from '../public/author-profile-picture.png'
 
 const SocialShare = dynamic(() => import('@/components/SocialShare'))
 
