@@ -2,7 +2,7 @@
 layout: Services
 seo:
   title: Web Development Services
-  description: Custom description for this page goes here
+  description: Services page
 ---
 
 

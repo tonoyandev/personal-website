@@ -2,15 +2,15 @@
 layout: Home
 seo:
   title: Web Developer
-  description: Custom description for this page goes here
+  description: Homepage
 ---
 
 ---main
 images:
-  - src: /hero-2.png
-    alt: my photo
-  - src: /hero-mobile.jpg
-    alt: my photo
+  - src: /hero.png
+    alt: ararat tonoyan photo
+  - src: /hero-mobile.png
+    alt: ararat tonoyan photo
 ---
 
 # <Typewriter>Ararat Tonoyan</Typewriter>

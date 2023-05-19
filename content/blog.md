@@ -2,7 +2,7 @@
 layout: Blog
 seo:
   title: My Blog
-  description: Custom description for this page goes here
+  description: Blog page
 collection:
   path: /blog
   sortBy: date

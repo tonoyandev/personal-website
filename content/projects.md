@@ -2,7 +2,7 @@
 layout: Projects
 seo:
   title: Web Development Projects
-  description: Custom description for this page goes here
+  description: Projects page
 ---
 
 ---github

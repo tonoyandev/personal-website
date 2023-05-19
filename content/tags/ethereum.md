@@ -3,7 +3,7 @@ layout: Blog
 title: Ethereum
 seo:
   title: Ethereum and EVM
-  description: Custom description for this page goes here
+  description: Ethereum and EVM blog page
 collection:
   path: /blog
   recordsPerPage: 9

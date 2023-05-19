@@ -3,7 +3,7 @@ layout: Blog
 title: Node.js
 seo:
   title: Node.js Articles
-  description: Custom description for this page goes here
+  description: Note.js blog page
 collection:
   path: /blog
   recordsPerPage: 9

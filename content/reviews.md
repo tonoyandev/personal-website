@@ -1,8 +1,8 @@
 ---
 layout: Reviews
 seo:
-  title: Web Development Projects
-  description: Custom description for this page goes here
+  title: My reviews
+  description: Reviews page
 ---
 
 ---reviews
