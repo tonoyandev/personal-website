@@ -18,7 +18,7 @@ const FormCheckbox = React.forwardRef((props, ref) => {
         name={name}
         type={type}
         value={value}
-        className="h-6 w-6 border-omega-300 text-accent-600 focus:ring-accent-500"
+        className="h-6 w-6 border-omega-300 text-accent-600 outline-none"
         onChange={handleChange}
       />
       <label htmlFor={id} className="ml-3 block">

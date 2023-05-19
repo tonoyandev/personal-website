@@ -40,31 +40,37 @@
     "fields": [
       {
         "type": "checkbox",
+        "id": "Consulting",
         "name": "project-type[Consulting]",
         "label": "Consulting"
       },
       {
         "type": "checkbox",
+        "id": "Web",
         "name": "project-type[Web-Development]",
         "label": "Web Dev"
       },
       {
         "type": "checkbox",
+        "id": "Solidity",
         "name": "project-type[Solidity-Development]",
         "label": "Solidity Dev"
       },
       {
         "type": "checkbox",
+        "id": "Security",
         "name": "project-type[Security-Audit]",
         "label": "Security Audit"
       },
       {
         "type": "checkbox",
+        "id": "Education",
         "name": "project-type[Education]",
         "label": "Education"
       },
       {
         "type": "checkbox",
+        "id": "Another",
         "name": "project-type[Another]",
         "label": "Another"
       }
