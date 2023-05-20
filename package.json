@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElegantStack/edgefolio.git"
+    "url": "https://github.com/tonoyandev/personal-website.git"
   },
   "engines": {
     "node": ">=14.0"

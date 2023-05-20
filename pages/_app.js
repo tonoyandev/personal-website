@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
 import MDXComponents from '@/components/MDX'
 import '@/styles/globals.css'
@@ -8,7 +9,14 @@ function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page)
 
   return (
-    <MDXProvider components={MDXComponents}>{getLayout(<Component {...pageProps} />)}</MDXProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      </Head>
+      <MDXProvider components={MDXComponents}>
+        {getLayout(<Component {...pageProps} />)}
+      </MDXProvider>
+    </>
   )
 }
 
