@@ -24,8 +24,9 @@ const HeroPhoto = ({ main }) => (
       <div className="md:hidden">
         <Image
           src={main.images[1].src}
-          width={main.images[1].width}
-          height={main.images[1].height}
+          width={180}
+          height={180}
+          quality={100}
           alt={main.images[1].alt}
           className="mx-auto"
           priority
