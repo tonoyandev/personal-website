@@ -115,7 +115,7 @@ Code blocks can also be used inside the `<Wide />` component.
 
 ### Tip Jar
 
-In order to receive tips (contributions) from your readers, we've developed a fully-functional `<TipJar />` React Component integrated with [ConvertKit](https://convertkit.com?lmref=CeGsMw&utm_campaign=documentation) that you can use anywhere in your blog posts or pages.
+In order to receive tips (contributions) from your readers, we've developed a fully-functional `<TipJar />` React Component integrated with [ConvertKit](https://convertkit.com&utm_campaign=documentation) that you can use anywhere in your blog posts or pages.
 
 ```md
 <TipJar />
@@ -128,7 +128,7 @@ This will render the TipJar component:
 
 ### Newsletter
 
-The theme is integrated with [ConvertKit](https://convertkit.com?lmref=CeGsMw&utm_campaign=documentation) to grow your email list of subscribers. By creating an email list, you can notify your subscribers when you publish new blog posts or market and sell your digital products to your subscribers. The newsletter component is
+The theme is integrated with [ConvertKit](https://convertkit.com&utm_campaign=documentation) to grow your email list of subscribers. By creating an email list, you can notify your subscribers when you publish new blog posts or market and sell your digital products to your subscribers. The newsletter component is
 
 ```md
 <Newsletter className="bg-omega-800 p-10" />
