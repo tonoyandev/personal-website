@@ -46,7 +46,7 @@ if (have_a_project) navigate('/contact')
 
 ---cta
 ---
-<Button href="/contact" size="lg">
+<Button href="/Ararat-Tonoyan-Solidity-Web-Developer-Resume.pdf" target="_blank" rel="noopener" size="lg">
   Download Resume
 </Button>
 
