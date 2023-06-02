@@ -20,7 +20,7 @@ Smart contracts are a cornerstone of the blockchain revolution, but they're not 
 Perhaps the most infamous smart contract vulnerability, the reentrancy attack was used in the DAO hack. It occurs when a function calls an external contract before it resolves, allowing the called contract to loop back and reenter the calling function.
 
 ```solidity
-function withdraw(uint _amount) public {
+function withdraw(uint256 _amount) public {
     require(balances[msg.sender] >= _amount);
     msg.sender.call.value(_amount)("");
     balances[msg.sender] -= _amount;
@@ -30,7 +30,7 @@ function withdraw(uint _amount) public {
 **Prevention:** Use the Checks-Effects-Interactions pattern, and update state before calling external contracts.
 
 ```solidity
-function withdraw(uint _amount) public {
+function withdraw(uint256 _amount) public {
     require(balances[msg.sender] >= _amount);
     balances[msg.sender] -= _amount;
     msg.sender.call.value(_amount)("");
@@ -39,12 +39,12 @@ function withdraw(uint _amount) public {
 
 ## 2. Integer Overflow and Underflow
 
-Integer overflow and underflow occur when a uint variable goes beyond its maximum value and flips to zero (overflow), or when it goes below zero and flips to its maximum value (underflow).
+Integer overflow and underflow occur when a uint256 variable goes beyond its maximum value and flips to zero (overflow), or when it goes below zero and flips to its maximum value (underflow).
 
 ```solidity
-uint public totalSupply;
+uint256 public totalSupply;
 
-function mint(uint _amount) public {
+function mint(uint256 _amount) public {
     totalSupply += _amount;
 }
 ```
@@ -54,10 +54,10 @@ function mint(uint _amount) public {
 ```solidity
 import "@openzeppelin/contracts/math/SafeMath.sol";
 
-uint public totalSupply;
+uint256 public totalSupply;
 using SafeMath for uint;
 
-function mint(uint _amount) public {
+function mint(uint256 _amount) public {
     totalSupply = totalSupply.add(_amount);
 }
 ```
@@ -92,7 +92,7 @@ function kill() public {
 Some Solidity functions don’t throw an exception when they fail but return false instead. If these return values aren’t checked, it can lead to serious vulnerabilities.
 
 ```solidity
-function transfer(address _to, uint _value) public {
+function transfer(address _to, uint256 _value) public {
     require(balances[msg.sender] >= _value);
     balances[msg.sender] -= _value;
     balances[_to] += _value;
@@ -102,7 +102,7 @@ function transfer(address _to, uint _value) public {
 **Prevention:** Always check the return value of non-view function calls.
 
 ```solidity
-function safeTransfer(address _to, uint _value) public returns (bool) {
+function safeTransfer(address _to, uint256 _value) public returns (bool) {
     require(balances[msg.sender] >= _value);
     balances[msg.sender] -= _value;
     balances[_to] += _value;
@@ -115,7 +115,7 @@ function safeTransfer(address _to, uint _value) public returns (bool) {
 Error handling is crucial in any programming language, and Solidity is no different. Properly implemented, it can help prevent loss of funds and other serious issues.
 
 ```solidity
-function sendETH(address payable _to, uint _amount) public {
+function sendETH(address payable _to, uint256 _amount) public {
     (bool success, ) = _to.call.value(_amount)("");
 }
 ```
@@ -123,7 +123,7 @@ function sendETH(address payable _to, uint _amount) public {
 **Prevention:** Always handle the return value of calls and use `revert()` with error messages.
 
 ```solidity
-function sendETH(address payable _to, uint _amount) public {
+function sendETH(address payable _to, uint256 _amount) public {
     (bool success, ) = _to.call.value(_amount)("");
     if(!success) {
         revert("ETH transfer failed.");
@@ -136,7 +136,7 @@ function sendETH(address payable _to, uint _amount) public {
 Front-running is a potential issue where a malicious actor can see a pending transaction and issue their own transaction with a higher gas price, causing it to be confirmed first.
 
 ```solidity
-function bid(uint _amount) public {
+function bid(uint256 _amount) public {
     require(_amount > highestBid);
     highestBid = _amount;
     highestBidder = msg.sender;
@@ -152,7 +152,7 @@ function commitBid(bytes32 _commitment) public {
     commitments[msg.sender] = _commitment;
 }
 
-function revealBid(uint _amount, string memory _salt) public {
+function revealBid(uint256 _amount, string memory _salt) public {
     require(keccak256(abi.encodePacked(_amount, _salt)) == commitments[msg.sender]);
     require(_amount > highestBid);
     highestBid = _amount;
@@ -174,7 +174,7 @@ function transfer(address _to, uint256 _value) public {
 **Prevention:** Always validate the input data length before proceeding with function execution.
 
 ```solidity
-modifier onlyPayloadSize(uint size) {
+modifier onlyPayloadSize(uint256 size) {
     require(msg.data.length >= size + 4);
     _;
 }
@@ -200,9 +200,9 @@ function lottery() public {
 **Prevention:** Avoid reliance on `block.timestamp` for critical logic.
 
 ```solidity
-function lottery(uint userProvidedSeed) public {
+function lottery(uint256 userProvidedSeed) public {
     bytes32 blockHash = blockhash(block.number - 1);
-    uint randomNumber = uint(keccak256(abi.encodePacked(userProvidedSeed, blockHash)));
+    uint256 randomNumber = uint(keccak256(abi.encodePacked(userProvidedSeed, blockHash)));
     if(randomNumber % 2 == 0) {
         msg.sender.transfer(address(this).balance);
     }
@@ -215,7 +215,7 @@ Prior to Solidity 0.4.22, a contract’s constructor was a function with the sam
 
 ```solidity
 contract MyContract {
-    uint public x;
+    uint256 public x;
 
     function MyContract() public {
         x = 10;
@@ -227,7 +227,7 @@ contract MyContract {
 
 ```solidity
 contract MyContract {
-    uint public x;
+    uint256 public x;
 
     constructor() public {
         x = 10;

@@ -71,7 +71,7 @@ Just like in a symphony, every loop in Solidity needs to hit the right note to a
 
 **NO:**
 ```solidity
-for (uint i = 0; i < expensiveArray.length; i++) {
+for (uint256 i = 0; i < expensiveArray.length; i++) {
     // Complex operations
 }
 ```
@@ -80,7 +80,7 @@ This loop can cause an outrageous gas bill, especially with large arrays and com
 **YES:**
 ```solidity
 uint256 len = expensiveArray.length;
-for (uint i = 0; i < len; i++) {
+for (uint256 i = 0; i < len; i++) {
     // Complex operations
 }
 ```

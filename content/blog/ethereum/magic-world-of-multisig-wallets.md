@@ -36,30 +36,30 @@ pragma solidity ^0.8.0;
 contract MultisigWallet {
 
     // Event that will be emitted whenever a transaction is proposed
-    event TransactionProposed(address proposer, uint transactionId, address to, uint value, bytes data);
+    event TransactionProposed(address proposer, uint256 transactionId, address to, uint256 value, bytes data);
     // Event that will be emitted whenever a transaction is executed
-    event TransactionExecuted(address executor, uint transactionId);
+    event TransactionExecuted(address executor, uint256 transactionId);
     // Event that will be emitted whenever a transaction is approved
-    event TransactionApproved(address approver, uint transactionId);
+    event TransactionApproved(address approver, uint256 transactionId);
 
     struct Transaction {
         address to;
-        uint value;
+        uint256 value;
         bytes data;
-        uint numApprovals;
+        uint256 numApprovals;
         bool executed;
         mapping(address => bool) approvals;
     }
 
     address[] public owners;
-    uint public numApprovalsRequired;
+    uint256 public numApprovalsRequired;
 
-    mapping(uint => Transaction) public transactions;
-    uint public transactionCount;
+    mapping(uint256 => Transaction) public transactions;
+    uint256 public transactionCount;
 
     modifier onlyOwner() {
         bool isOwner = false;
-        for (uint i = 0; i < owners.length; i++) {
+        for (uint256 i = 0; i < owners.length; i++) {
             if (owners[i] == msg.sender) {
                 isOwner = true;
                 break;
@@ -69,30 +69,30 @@ contract MultisigWallet {
         _;
     }
 
-    modifier transactionExists(uint _transactionId) {
+    modifier transactionExists(uint256 _transactionId) {
         require(_transactionId < transactionCount, "transaction does not exist");
         _;
     }
 
-    modifier notExecuted(uint _transactionId) {
+    modifier notExecuted(uint256 _transactionId) {
         require(!transactions[_transactionId].executed, "transaction already executed");
         _;
     }
 
-    modifier notApproved(uint _transactionId) {
+    modifier notApproved(uint256 _transactionId) {
         require(!transactions[_transactionId].approvals[msg.sender], "transaction already approved");
         _;
     }
 
-    constructor(address[] memory _owners, uint _numApprovalsRequired) {
+    constructor(address[] memory _owners, uint256 _numApprovalsRequired) {
         require(_owners.length >= _numApprovalsRequired, "number of approvals required should be less than or equal to the number of owners");
         owners = _owners;
         numApprovalsRequired = _numApprovalsRequired;
     }
 
     // Allow owners to propose transactions
-    function proposeTransaction(address _to, uint _value, bytes memory _data) onlyOwner public returns (uint) {
-        uint transactionId = transactionCount;
+    function proposeTransaction(address _to, uint256 _value, bytes memory _data) onlyOwner public returns (uint) {
+        uint256 transactionId = transactionCount;
         transactions[transactionId]
 
  = Transaction(_to, _value, _data, 0, false);
@@ -103,7 +103,7 @@ contract MultisigWallet {
     }
 
     // Allow owners to approve transactions
-    function approveTransaction(uint _transactionId) onlyOwner transactionExists(_transactionId) notExecuted(_transactionId) notApproved(_transactionId) public {
+    function approveTransaction(uint256 _transactionId) onlyOwner transactionExists(_transactionId) notExecuted(_transactionId) notApproved(_transactionId) public {
         Transaction storage transaction = transactions[_transactionId];
         transaction.numApprovals++;
         transaction.approvals[msg.sender] = true;
