@@ -46,15 +46,15 @@
       },
       {
         "type": "checkbox",
-        "id": "Web",
-        "name": "project-type[Web-Development]",
-        "label": "Web Dev"
+        "id": "Development",
+        "name": "project-type[Development]",
+        "label": "Development"
       },
       {
         "type": "checkbox",
-        "id": "Solidity",
-        "name": "project-type[Solidity-Development]",
-        "label": "Solidity Dev"
+        "id": "Assets",
+        "name": "project-type[Assets-Management]",
+        "label": "Assets Management"
       },
       {
         "type": "checkbox",
