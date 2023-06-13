@@ -79,13 +79,18 @@ const Menu = () => {
         )}
       >
         {menu && (
-          <div className="grid w-full grid-cols-4 bg-gradient-to-b from-transparent to-omega-800 md:block">
+          <div
+            className={classNames(
+              'grid w-full  bg-gradient-to-b from-transparent to-omega-800 md:block',
+              isOpen ? 'grid-cols-3' : 'grid-cols-4'
+            )}
+          >
             {menu &&
               menu.map((item) => <MenuItem {...item} key={`${item.slug}`} onClick={closeMenu} />)}
             <div
               className={classNames(
                 'row-start-1 flex h-16 items-center md:hidden',
-                isOpen ? 'col-span-4 col-start-1' : 'bg-gradient-omega-900 col-start-4'
+                isOpen ? 'col-span-3 col-start-1' : 'bg-gradient-omega-900 col-start-4'
               )}
               onClick={toggleMenu}
             >
@@ -101,7 +106,7 @@ const Menu = () => {
         )}
 
         {social && (
-          <div className="flex w-full flex-wrap bg-accent md:block md:bg-omega-800">
+          <div className="bg-social-menu flex w-full flex-wrap md:block md:bg-omega-800">
             {social.map((item, i) => (
               <SocialLink key={`${i}-social`} {...item} />
             ))}

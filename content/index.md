@@ -15,16 +15,16 @@ images:
 
 # <Typewriter>Ararat Tonoyan</Typewriter>
 
-# *Code Guru* <span>&</span> *Blockchain Expert*
+# *Blockchain Expert*
 
-Welcome to my website! When it comes to the intricate world of distributed ledger technology, you can think of me as a lighthouse in the thick fog of complexity. I'm here to help you navigate the ever-evolving blockchain landscape with ease and confidence.
+Welcome to my site! Consider me your guide through the complex world of distributed ledger technology, assisting you to traverse the dynamic blockchain landscape with confidence.
 
 ```js {2-5} showLineNumbers
 const services = [
   'Consulting',
   'Development',
-  'WEB3 & Smart Contracts',
-  'Audit and PenTest'
+  'Security Analysis',
+  'Team Training'
 ]
 if (have_a_project) navigate('/contact')
 ```

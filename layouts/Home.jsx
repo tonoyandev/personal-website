@@ -70,7 +70,7 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
       <div className="relative shrink-0 basis-1/2 text-center md:order-2 md:-ml-20">
         <HeroPhoto main={main} />
       </div>
-      <div className="z-10 mt-6 basis-full md:mb-12 md:mt-0">
+      <div className="z-10 mt-6 basis-full md:mb-6 md:mt-0">
         <HeroAbout main={main} />
       </div>
     </div>

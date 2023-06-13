@@ -52,9 +52,9 @@ icon:
 <small>
   I offer expert advice, guiding you through the complexities of blockchain technology and its applications.
 
-    - <strong>Assess Needs</strong>
-    - <strong>Provide Insights</strong>
-    - <strong>Strategy Development</strong>
+    - <strong>Cryptocurrency Handling</strong>
+    - <strong>Security Measures</strong>
+    - <strong>Training and Education</strong>
 </small>
 
 
