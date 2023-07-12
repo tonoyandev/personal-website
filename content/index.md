@@ -60,10 +60,10 @@ list:
   - name: Upwork
     icon:
       src: /companies/upwork.svg
+  - name: CFSB.RU
+    icon:
+      src: /companies/cfsb.svg
   - name: OpenZeppelin
     icon:
       src: /companies/oz.svg
-  - name: DAO Maker
-    icon:
-      src: /companies/dao_maker.svg
 ---
