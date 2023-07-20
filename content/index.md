@@ -1,7 +1,7 @@
 ---
 layout: Home
 seo:
-  title: Web Developer
+  title: Blockchain and Web Specialist
   description: Homepage
 ---
 
