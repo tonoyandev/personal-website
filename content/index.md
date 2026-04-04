@@ -17,14 +17,16 @@ images:
 
 # *Blockchain Expert*
 
-Welcome to my site! Consider me your guide through the complex world of distributed ledger technology, assisting you to traverse the dynamic blockchain landscape with confidence.
+Blockchain architecture and engineering leadership — built for organizations where the margin for error is zero.
+
+If you have a project that needs to be done right, let's talk.
 
 ```js {2-5} showLineNumbers
 const services = [
   'Consulting',
   'Development',
   'Security Analysis',
-  'Team Training'
+  'Hiring and Training'
 ]
 if (have_a_project) navigate('/contact')
 ```
@@ -32,12 +34,12 @@ if (have_a_project) navigate('/contact')
 
 
 ---achievements
-- number: 8+
+- number: 12+
   text: Years of experience
-- number: 220+
-  text: Deployed contracts
-- number: 62
-  text: Happy customers
+- number: $500M+
+  text: TVL secured
+- number: 86
+  text: Satisfied clients
 - number: 100+
   text: Projects completed
 ---

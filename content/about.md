@@ -15,23 +15,30 @@ images:
 ---
 ##### <span>01.</span> Professional Background
 
-I architect and deliver blockchain infrastructure for organizations where failure is not an option. Over 12 years in software engineering, with deep specialization in distributed ledger technology, smart contract security, and protocol design, I have built systems that secure and move real capital.
+12 years in software engineering. 7 of them building EVM infrastructure that handles real capital.
 
-My clients include DeFi protocols managing eight-figure TVL, tokenization platforms subject to regulatory oversight, and enterprise organizations migrating critical operations on-chain. I bring the same rigor to every engagement: formal verification, comprehensive audit methodology, and production-grade engineering standards.
+I work with DeFi protocols in the $10M–$100M+ TVL range, regulated tokenization platforms, and enterprises moving critical financial operations on-chain. On the engineering side, I've led teams from 3 to 15 people — technical direction, delivery standards, hiring, the full thing.
 
-##### <span>02.</span> Advisory & Methodology
+##### <span>02.</span> How I work
 
-<b>- Security-First Architecture</b>: Every contract I deliver undergoes static analysis, fuzz testing, and formal verification. I treat smart contract development as safety-critical engineering, applying methodologies drawn from aerospace and financial systems.
+I spend more time on architecture than on code. At the scale my clients operate, a bad design decision in week one costs more to fix than six months of development. I design modular, upgradeable protocol systems — proxy architectures, diamond patterns, plugin registries — with the assumption that requirements will change and attackers will probe every surface.
 
-<b>- Regulatory Awareness</b>: I work closely with legal and compliance teams to ensure on-chain solutions align with MiCA, SEC guidance, and jurisdiction-specific requirements. Technology that cannot withstand regulatory scrutiny has no place in production.
+Security runs through the process, not at the end. Threat modeling at the whiteboard. Static analysis and property-based fuzzing during development. Formal verification before external audit. I've coordinated audits with leading firms and handled the part most developers skip: integrating findings into the architecture, not just patching the flagged lines.
 
-<b>- Institutional Standards</b>: From key management and multisig governance to upgrade patterns and incident response planning, I design systems that meet the operational expectations of institutional stakeholders, auditors, and insurance underwriters.
+Compliance is structural. On-chain KYC/AML hooks, permissioned pool designs, transfer restriction modules — built from day one to align with MiCA and SEC frameworks, not retrofitted when a legal team asks questions.
 
-<b>- End-to-End Delivery</b>: I own the full lifecycle from requirements analysis and protocol design through development, audit coordination, deployment, and post-launch monitoring. No handoff gaps, no ambiguity.
+I own delivery end-to-end: protocol design through post-launch monitoring. I also run the engineering teams that build it — roadmaps, code review standards, incident response, technical hiring.
 
-##### <span>03.</span> Technology & Tooling
+##### <span>03.</span> Stack & Standards
 
-My current stack reflects the state of the art in 2026: Foundry and Hardhat for development and testing, OpenZeppelin Defender for operations, Slither and Mythril for static analysis, Echidna for property-based fuzzing, and Chainlink CCIP for cross-chain interoperability. I deploy across EVM-compatible chains including Ethereum, Arbitrum, Base, and Polygon, as well as Solana when the use case demands it.
+Solidity · Vyper · ERC-4626 · ERC-4337 · ERC-2535 · Safe · OpenZeppelin · Uniswap V3/V4 · Aave V3 · Chainlink CCIP · LayerZero · EigenLayer · Foundry · Echidna · Certora · Tenderly · The Graph
+
+<b>Networks</b>: Ethereum · Arbitrum · Optimism · Base · Polygon · zkSync Era · Linea · Scroll
+
+##### <span>04.</span> What I take on
+
+Greenfield protocol architecture and system design for DeFi, RWA, and institutional on-chain products. Security reviews, threat modeling, and pre-audit remediation — including audit coordination and architectural revisions when findings go deeper than a patch. Cross-chain interoperability design across EVM networks. Legacy contract migration and upgrade strategy for live production systems. Technical leadership and team buildout for organizations that need a senior engineering layer, not just a contractor.
+
 
 
 
