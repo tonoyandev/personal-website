@@ -1,7 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import FormInput from '@/components/FormInput'
-import Icon from '@/components/Icon'
 import Button from '@/components/Button'
 import { IoClose } from 'react-icons/io5'
 
@@ -32,60 +31,15 @@ const SuccessMessage = ({ handleReset }) => (
   </div>
 )
 
-const Badge = () => (
-  <div>
-    <a
-      className="group h-6 text-omega-400 no-underline"
-      target="_blank"
-      rel="noreferrer"
-      href="https://convertkit.com"
-    >
-      <span className="text-xs">BUILT WITH</span>
-      <Icon
-        src="/icons/convertkit.svg"
-        className="ml-2 mb-1 inline h-6 w-24 align-middle group-hover:text-[#FB6970]"
-      />
-    </a>
-  </div>
-)
-
 const Newsletter = ({ className }) => {
   const {
     register,
-    formState: { errors, isValidating, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
     handleSubmit,
-    setError,
-    clearErrors,
     reset,
   } = useForm()
 
-  const onSubmit = async (data) => {
-    try {
-      const res = await fetch(`/api/subscribe`, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: new Headers({
-          'Content-Type': 'application/json',
-          credentials: 'same-origin',
-        }),
-      })
-      if (res.status === 201) {
-        return true
-      }
-      const json = await res.json()
-      if (json.error) {
-        throw json.error
-      }
-    } catch (error) {
-      setError('service', { type: 'serviceSideError', message: error })
-    }
-  }
-
-  React.useEffect(() => {
-    if (errors.service && isValidating) {
-      clearErrors('service')
-    }
-  }, [isValidating, errors.service, clearErrors])
+  const onSubmit = async () => {}
 
   return (
     <div className={className}>
@@ -104,7 +58,7 @@ const Newsletter = ({ className }) => {
               name="email"
               placeholder="hi@example.com"
               aria-label="email address"
-              hasError={errors.email || errors.service}
+              hasError={errors.email}
               {...register('email', {
                 required: {
                   value: true,
@@ -118,7 +72,6 @@ const Newsletter = ({ className }) => {
             />
             <div className="absolute bottom-full left-0 z-10">
               <ErrorMessage errors={errors} name="email" />
-              <ErrorMessage errors={errors} name="service" />
             </div>
           </div>
           <Button as="button" type="submit" size="xs" disabled={isSubmitting}>
@@ -126,7 +79,6 @@ const Newsletter = ({ className }) => {
           </Button>
         </form>
       )}
-      <Badge />
     </div>
   )
 }
