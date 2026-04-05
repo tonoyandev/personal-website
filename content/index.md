@@ -36,7 +36,7 @@ if (have_a_project) navigate('/contact')
 ---achievements
 - number: 12+
   text: Years of experience
-- number: $500M+
+- number: $80M+
   text: TVL secured
 - number: 86
   text: Satisfied clients
