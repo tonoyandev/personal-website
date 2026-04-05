@@ -70,14 +70,14 @@ const HeroAbout = ({ main }) => {
 const Achievements = ({ achievements }) => (
   <div
     className={classNames(
-      'prose prose-invert hidden grow grid-cols-2 gap-2 sm:grid md:gap-6 md:pr-6'
+      'prose prose-invert hidden grow grid-cols-[auto_1fr_auto_1fr] gap-x-4 gap-y-2 sm:grid md:gap-x-6 md:gap-y-6 md:pr-6'
     )}
   >
     {achievements?.map((item, i) => (
-      <div key={i} className="flex flex-col items-center justify-center md:flex-row">
-        <h2 className="m-0 text-white md:pr-4">{item.number}</h2>
-        <div className="dark:text-accent-400">{item.text}</div>
-      </div>
+      <React.Fragment key={i}>
+        <h2 className="m-0 text-right text-white">{item.number}</h2>
+        <div className="flex items-center dark:text-accent-400">{item.text}</div>
+      </React.Fragment>
     ))}
   </div>
 )
