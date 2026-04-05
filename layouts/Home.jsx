@@ -36,17 +36,36 @@ const HeroPhoto = ({ main }) => (
   </>
 )
 
-const HeroAbout = ({ main }) => (
-  <Reveal
-    animation="fade-in slide-in-right"
-    className={classNames(
-      'prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden',
-      'prose-headings:my-6 prose-pre:max-w-[100vw] md:prose-p:block md:prose-pre:max-w-lg'
-    )}
-  >
-    <ContentRenderer source={main} />
-  </Reveal>
-)
+const HeroAbout = ({ main }) => {
+  const codeRef = React.useRef(null)
+
+  React.useEffect(() => {
+    if (!codeRef.current) return
+    const tokens = codeRef.current.querySelectorAll('.token.string')
+    tokens.forEach((el) => {
+      if (el.textContent === "'/contact'") {
+        el.style.cursor = 'pointer'
+        el.addEventListener('click', () => {
+          window.location.href = '/contact'
+        })
+      }
+    })
+  }, [])
+
+  return (
+    <Reveal
+      animation="fade-in slide-in-right"
+      className={classNames(
+        'prose prose-invert prose-headings:my-4 first-of-type:prose-headings:mt-0 prose-p:hidden',
+        'prose-headings:my-6 prose-pre:max-w-[100vw] md:prose-p:block md:prose-pre:max-w-lg'
+      )}
+    >
+      <div ref={codeRef}>
+        <ContentRenderer source={main} />
+      </div>
+    </Reveal>
+  )
+}
 
 const Achievements = ({ achievements }) => (
   <div
@@ -87,7 +106,7 @@ const Layout = ({ main = {}, cta = {}, achievements = [], companies }) => (
           <ContentRenderer source={cta} />
         </div>
       </div>
-      <div className="mt-6 mt-12 hidden w-3/4 px-2 pr-12 md:block">
+      <div className="mt-6 w-full px-4 md:mt-12 md:w-3/4 md:px-2 md:pr-12">
         <Companies {...companies} />
       </div>
     </div>

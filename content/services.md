@@ -1,8 +1,8 @@
 ---
 layout: Services
 seo:
-  title: Web Development Services
-  description: Services page
+  title: Blockchain Architecture & Security Services
+  description: Protocol architecture, smart contract security, and engineering leadership for serious on-chain products.
 ---
 
 
@@ -12,33 +12,26 @@ seo:
 
 <PageTitle>
   ### Services
-
-  ### _My Expertise_
 </PageTitle>
 
-###### Solving problems
+I build and secure the systems that serious on-chain products run on. No generalist work — every engagement is scoped around architecture, security, or engineering leadership at the protocol level.
 
-With extensive experience in the blockchain sector and a knack for innovative problem-solving, I provide solutions that are not only effective but also tailored to your unique needs. I believe in the power of collaboration and clear communication, ensuring that we achieve your business goals together.
+###### What I deliver
 
-###### What you can expect
+- Protocol architecture and system design
+- Smart contract development
+- Security audit and pre-audit remediation
+- Penetration testing
+- Team leadership and technical buildout
 
-- Consulting
-- Development
-- WEB3 & Smart Contracts
-- Audit and PenTest
+###### Stack
 
-###### Applications I'm fluent in
-
-- Web3 JS
-- Solidity
-- React JS
-- Node JS
-- Microservices
+Solidity · Vyper · Node.js · React · TypeScript · Foundry · Hardhat · Echidna · Slither · Certora · The Graph · Chainlink · LayerZero · OpenZeppelin · Safe
 
 <Sep size="12" />
 
 <Button href="/contact" variant="white" size="sm">
-  Get Free Price Quote
+  Schedule a Consultation
 </Button>
 
 
@@ -50,11 +43,7 @@ icon:
 ---
 
 <small>
-  I offer expert advice, guiding you through the complexities of blockchain technology and its applications.
-
-    - <strong>Cryptocurrency Handling</strong>
-    - <strong>Security Measures</strong>
-    - <strong>Training and Education</strong>
+  Architecture reviews, protocol strategy, regulatory alignment, and technical due diligence. I work with engineering teams and executive stakeholders — not just developers.
 </small>
 
 
@@ -66,43 +55,29 @@ icon:
 ---
 
 <small>
-  With a focus on your unique requirements, I develop blockchain systems that deliver on functionality and efficiency.
-
-    - <strong>Custom Design</strong>
-    - <strong>Efficient Coding</strong>
-    - <strong>System Integration</strong>
+  Full-cycle EVM development: protocol design, smart contract implementation, system integration, and post-launch monitoring. Built to institutional standards from day one.
 </small>
 
 
 
 ---services[2]
-title: WEB3 & Smart Contracts
+title: Web3 & Smart Contracts
 icon:
   src: /icons/dashboard.svg
 ---
 
 <small>
-  I harness the power of Web3 and smart contracts to build innovative, secure, and user-friendly decentralized applications.
-
-    - <strong>Requirements Gathering</strong>
-    - <strong>Smart Contract Creation</strong>
-    - <strong>DApp Integration</strong>
-    - <strong>Testing and Deployment</strong>
+  DeFi primitives, tokenization platforms, account abstraction, cross-chain protocols. Requirements through deployment — including audit coordination.
 </small>
 
 
 
 ---services[3]
-title: Audit and Debugging
+title: Audit & Security
 icon:
   src: /icons/audit.svg
 ---
 
 <small>
-   I ensure the resilience of your systems with thorough audits and penetration tests, safeguarding your blockchain solutions.
-
-  - <strong>Optimising and Scalability</strong>
-  - <strong>Comprehensive Auditing </strong>
-  - <strong>Penetration Testing</strong>
-  - <strong>Security Enhancement</strong>
+  Threat modeling, static analysis, fuzz testing, formal verification, and penetration testing. Pre-audit remediation and architectural hardening for production systems.
 </small>

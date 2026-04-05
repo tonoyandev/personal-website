@@ -68,4 +68,7 @@ list:
   - name: OpenZeppelin
     icon:
       src: /companies/oz.svg
+  - name: Web3ARM
+    icon:
+      src: /companies/web3arm.svg
 ---
