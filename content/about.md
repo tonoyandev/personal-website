@@ -25,8 +25,6 @@ I spend more time on architecture than on code. At the scale my clients operate,
 
 Security runs through the process, not at the end. Threat modeling at the whiteboard. Static analysis and property-based fuzzing during development. Formal verification before external audit. I've coordinated audits with leading firms and handled the part most developers skip: integrating findings into the architecture, not just patching the flagged lines.
 
-Compliance is structural. On-chain KYC/AML hooks, permissioned pool designs, transfer restriction modules — built from day one to align with MiCA and SEC frameworks, not retrofitted when a legal team asks questions.
-
 I own delivery end-to-end: protocol design through post-launch monitoring. I also run the engineering teams that build it — roadmaps, code review standards, incident response, technical hiring.
 
 ##### <span>03.</span> Stack & Standards
