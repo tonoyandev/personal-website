@@ -8,7 +8,7 @@
 
 
 import { IoLogoLinkedin } from 'react-icons/io5'
-import { SiTelegram } from 'react-icons/si'
+import { SiTelegram, SiUpwork } from 'react-icons/si'
 import { TfiHome, TfiPencilAlt } from 'react-icons/tfi'
 import { SlUser, SlBriefcase, SlEnvolope, SlTrophy } from 'react-icons/sl'
 
@@ -63,6 +63,11 @@ export const social = [
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/tonoyandev/',
     Icon: IoLogoLinkedin,
+  },
+  {
+    name: 'Upwork',
+    url: 'https://www.upwork.com/freelancers/tonoyandev',
+    Icon: SiUpwork,
   }
 ]
 
