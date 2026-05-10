@@ -34,8 +34,8 @@ const contact = async (req, res) => {
     return res.status(400).json({ error: 'Project description is required.' })
   }
 
-  const projectType = req.body['project-type'] || {}
-  const anyServiceSelected = Object.values(projectType).some(Boolean)
+  const serviceIds = ['Consulting', 'Development', 'Assets', 'Security', 'Education', 'Another']
+  const anyServiceSelected = serviceIds.some((id) => req.body[id])
   if (!anyServiceSelected) {
     return res.status(400).json({ error: 'Please select at least one service.' })
   }
