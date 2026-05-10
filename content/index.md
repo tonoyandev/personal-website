@@ -34,13 +34,13 @@ if (have_a_project) navigate('/contact')
 
 
 ---achievements
-- number: 12+
+- number: 10+
   text: Years of experience
-- number: $80M+
-  text: TVL secured
+- number: 100%
+  text: JSS on Upwork
 - number: 86
   text: Satisfied clients
-- number: 100+
+- number: 114
   text: Projects completed
 ---
 
