@@ -41,6 +41,11 @@ const SuccessMessage = () => (
 
 const CHECKBOX_GROUP = 'project-type'
 
+const checkboxIds = inputs
+  ?.flatMap(({ fields }) => fields)
+  .filter((f) => f.type === 'checkbox')
+  .map((f) => f.id)
+
 const Contact01 = ({ main = {} }) => {
   const methods = useForm()
   const {
@@ -53,9 +58,7 @@ const Contact01 = ({ main = {} }) => {
   } = methods
 
   const onSubmit = async (data) => {
-    // Validate at least one service checkbox is selected
-    const projectType = data[CHECKBOX_GROUP] || {}
-    const anyChecked = Object.values(projectType).some(Boolean)
+    const anyChecked = checkboxIds?.some((id) => data[id])
     if (!anyChecked) {
       setError(CHECKBOX_GROUP, { type: 'required', message: 'Please select at least one service.' })
       return
