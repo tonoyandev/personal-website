@@ -1,77 +1,61 @@
-/** *************************************************************
- * Any file inside the folder pages/api is mapped to /api/* and *
- * will be treated as an API endpoint instead of a page.        *
- ****************************************************************/
-
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 import { config } from '../../theme.config'
 
-const transporter = nodemailer.createTransport({
-  host: 'mail.tonoyan.dev', // replace with your SMTP server
-  port: 465, // use 465 for SSL
-  secure: true, // true for 465, false for other ports
-  auth: {
-    user: 'hi@tonoyan.dev', // your cPanel email
-    pass: process.env.MAILSERVER_PASSWORD, // your cPanel password
-  },
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
+
+const getHtmlBody = (body) =>
+  Object.entries(body)
+    .map(([key, value]) => {
+      if (typeof value === 'string') return `<b>${key}</b>: ${value}`
+      if (typeof value === 'boolean') return value ? key : false
+      if (typeof value === 'object')
+        return `<b>${key}</b>: ${getHtmlBody(value).filter(Boolean).join(', ')}`
+      return null
+    })
+    .filter(Boolean)
 
 const contact = async (req, res) => {
-  const { email } = req.body
-  const { recipient, sender, subject } = config.contactForm || {}
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Request method is not allowed.' })
+  }
+
+  const { recipient, subject } = config.contactForm || {}
 
   if (!recipient) {
-    return res
-      .status(400)
-      .json({ error: 'Missing [config.contactForm.recipient] property in theme options.' })
+    return res.status(400).json({ error: 'Missing [config.contactForm.recipient] in theme options.' })
   }
-  if (!sender) {
-    return res
-      .status(400)
-      .json({ error: 'Missing [config.contactForm.sender] property in theme options.' })
-  }
+
+  const { email, message } = req.body
+
   if (!email) {
-    return res
-      .status(400)
-      .json({ error: 'Missing email address. Please provide a correct email address.' })
+    return res.status(400).json({ error: 'Email address is required.' })
+  }
+  if (!message || !message.trim()) {
+    return res.status(400).json({ error: 'Project description is required.' })
   }
 
-  if (req.method !== 'POST') {
-    return res.status(405).send({ error: 'Request method is not allowed.' })
+  const projectType = req.body['project-type'] || {}
+  const anyServiceSelected = Object.values(projectType).some(Boolean)
+  if (!anyServiceSelected) {
+    return res.status(400).json({ error: 'Please select at least one service.' })
   }
 
-  const getHtmlBody = (body) => {
-    return Object.entries(body).map(([key, value]) => {
-      if (typeof value === 'string') {
-        return `<b>${key}</b>: ${value}`
-      }
-      if (typeof value === 'boolean') {
-        return value === true ? key : false
-      }
-      if (typeof value === 'object') {
-        return `<b>${key}</b>: ${getHtmlBody(value)?.filter(Boolean).join(', ')}`
-      }
-      return html
-    })
-  }
-
-  let html = getHtmlBody(req.body)
-  if (Array.isArray(html)) {
-    html = html.join('<br />')
-  }
+  const html = getHtmlBody(req.body).join('<br />')
 
   try {
-    const mailOptions = {
-      to: recipient, // Your email where you'll receive emails
-      from: recipient, // your website email address here
-      replyTo: email,
+    const { error } = await resend.emails.send({
+      from: 'Contact Form <hi@tonoyan.dev>',
+      to: recipient,
+      reply_to: email,
       subject: req.body.subject || subject || 'Contact form entry',
       html,
-    };
+    })
 
-    await transporter.sendMail(mailOptions)
+    if (error) {
+      return res.status(500).json({ error: error.message })
+    }
   } catch (error) {
-    return res.status(error.statusCode || 500).json({ error: error.message })
+    return res.status(500).json({ error: error.message })
   }
 
   return res.status(200).json({ error: '' })

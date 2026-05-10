@@ -48,7 +48,7 @@ if (have_a_project) navigate('/contact')
 
 ---cta
 ---
-<Button href="/Ararat-Tonoyan-Solidity-Web-Developer-Resume.pdf" target="_blank" rel="noopener" size="lg">
+<Button href="/Web3_Engineer_Ararat_Tonoyan_CV.pdf" target="_blank" rel="noopener" size="lg">
   Download Resume
 </Button>
 

@@ -67,22 +67,43 @@ list:
 ---history[0]
 title: Professional Experience
 list:
-  - name: Independent Advisor & Architect — Worldwide
-    description: Team Lead & Principal Architect. Managing distributed engineering teams of up to 8 developers across multiple time zones. Delivered 80+ engagements for enterprises, DeFi protocols, and tokenization platforms. Diversified on-chain architecture of client projects to hybrid semi-offchain models, reducing gas costs by 60% via code modification and optimisation. Integrated CLOB-based order systems for DEX scalability. Conducted OSINT investigations and recovered stolen funds from centralized exchanges. Coordinated third-party audit processes with firms including Certik and OpenZeppelin.
-    date: 2020-Present
-  - name: Virtually Human Studio (ZED RUN) — Melbourne, Australia
-    description: Blockchain Lead. Executed full protocol migration from Ethereum L1 to Polygon, cutting transaction costs by 95% and enabling gasless transactions for end users via meta-transactions. Scaled infrastructure from 1K to 20K+ active wallets. Designed microservice architecture for real-time NFT gaming events and on-chain settlement. Led smart contract development, property-based testing, and dApp delivery.
-    date: 2020
-  - name: FirstBridge — Kyiv, Ukraine
-    description: Blockchain Lead. Managed a cross-functional team of 5 engineers and 2 QA specialists. Translated complex business requirements into modular smart contract architecture, delivering 12+ client projects on schedule. Built internal tooling that reduced deployment cycles by 40%. Delivered enterprise-grade distributed systems for institutional clients in supply chain and digital identity.
-    date: 2018-2020
-  - name: SoftConstruct — Yerevan, Armenia
-    description: Senior Frontend Engineer. Built high-performance, real-time web applications for regulated gaming and entertainment platforms serving millions of concurrent users.
-    date: 2016-2017
-  - name: Doctornet — Voronezh, Russia
-    description: Frontend Engineer. Designed and delivered enterprise dashboards and internal tooling for healthcare clients, led developer training programs to elevate team capability.
-    date: 2016
-  - name: St-Dev — Yerevan, Armenia
-    description: Software Engineer. Full-stack web application development and business logic implementation across client portfolio.
-    date: 2014-2016
+  - name: Evangelist — Web3 Armenia Foundation, Yerevan
+    description: Advising the Central Bank of Armenia and state institutions on crypto regulation, taxation methodology, and on-chain forensics.
+    date: Apr 2023 - Present
+  - name: Solidity Engineer — 40 Acres Finance, Yerevan
+    description: Built ve(3,3) tokenomics contracts and self-repaying ERC-4626 vault logic for a DeFi lending protocol, with frontend integration via viem and wagmi.
+    date: Apr 2025 - Feb 2026
+  - name: Independent Research & Consulting — Self-directed, Yerevan
+    description: Advisory work with Web3 founders on protocol architecture alongside independent research on Account Abstraction, L2 design, ve(3,3), and RWA frameworks.
+    date: Oct 2021 - Mar 2025
+  - name: Senior Blockchain Engineer — Upwork (Top Rated, 100% JSS), Yerevan
+    description: Delivered 100+ smart contracts across DeFi, tokenization, and enterprise blockchain for 60+ clients in Europe and North America, maintaining Top Rated status with no security incidents.
+    date: Jan 2018 - Oct 2021
+  - name: Lead Instructor — OTUS Online Education, Moscow
+    description: Designed and delivered a Solidity re-education program for working developers, authoring the full curriculum and coordinating three instructors across a cohort of 15.
+    date: Jun 2023 - Sep 2023
+  - name: Web & Blockchain Developer — Virtually Human (ZED.RUN), Melbourne
+    description: Cut per-transaction cost from $10 to $0.01 by migrating to Polygon with Biconomy gasless flows and designed the microservice architecture supporting the NFT gaming backend.
+    date: Jan 2020 - Oct 2020
+  - name: Smart Contract Lead — First Bridge, Kyiv
+    description: Sole blockchain engineer across 10+ client engagements, owning full technical scope — architecture, development, and integrations — across multiple countries.
+    date: May 2018 - Jan 2020
+  - name: Smart Contract Lead — Jury Online, Moscow
+    description: Architected the smart contract system for a $10M ICO, including a RICO-style structure and an on-chain arbitration protocol using token-weighted voting.
+    date: Jan 2019 - Apr 2019
+  - name: Smart Contract Developer — QuantNet, Saint Petersburg
+    description: Built a Merkle tree-based Proof of Data Existence system and open-sourced a Python microservice for off-chain compliance and audit verification.
+    date: Jan 2019 - Sep 2019
+  - name: Web & Smart Contract Developer — Leios, New Jersey
+    description: Architected and built the blockchain layer for a fintech startup handling international money transfers, from scratch through deployment including a mobile MVP.
+    date: Jun 2018 - Oct 2019
+  - name: Frontend Developer — BetConstruct, Yerevan
+    description: Built UI components and the lobby interface for a casino product serving 500+ daily active users and migrated key frontend modules to Angular.js.
+    date: Nov 2016 - Dec 2017
+  - name: Frontend Developer — Doctornet, Voronezh
+    description: Built Material Design dashboards for healthcare clients and ran internal engineering seminars on best practices and productivity.
+    date: Jun 2016 - Nov 2016
+  - name: Frontend Developer — STDev, Yerevan
+    description: Built production web application interfaces and implemented client-side business logic, using pair programming as the primary method for code review.
+    date: Dec 2014 - May 2016
 ---
