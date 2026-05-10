@@ -84,7 +84,8 @@
         "type": "textarea",
         "name": "message",
         "placeholder": "Project description",
-        "rows": 4
+        "rows": 4,
+        "required": true
       }
     ]
   }

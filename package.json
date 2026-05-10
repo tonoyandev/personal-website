@@ -52,6 +52,7 @@
     "remark-gfm": "^4.0.1",
     "remark-squeeze-paragraphs": "^6.0.0",
     "remark-unwrap-images": "^4.0.1",
+    "resend": "^6.12.3",
     "sharp": "^0.31.3",
     "sift": "^16.0.1"
   },

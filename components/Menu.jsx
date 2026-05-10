@@ -8,7 +8,7 @@ import { BiChevronDown, BiDotsHorizontalRounded } from 'react-icons/bi'
 const MenuItem = ({ name, Icon, text, slug, number, isOpen, toggleMenu, ...rest }) => (
   <ActiveLink
     href={slug}
-    activeClassName="from-beta to-alpha text-black"
+    activeClassName="bg-alpha text-black"
     inActiveClassName="from-omega-900 text-white group md:hover:from-accent-700 md:hover:to-accent"
     className={classNames(
       'h-16 md:h-auto',

@@ -39,6 +39,8 @@ const SuccessMessage = () => (
   </Reveal>
 )
 
+const CHECKBOX_GROUP = 'project-type'
+
 const Contact01 = ({ main = {} }) => {
   const methods = useForm()
   const {
@@ -47,9 +49,18 @@ const Contact01 = ({ main = {} }) => {
     handleSubmit,
     setError,
     clearErrors,
+    watch,
   } = methods
 
   const onSubmit = async (data) => {
+    // Validate at least one service checkbox is selected
+    const projectType = data[CHECKBOX_GROUP] || {}
+    const anyChecked = Object.values(projectType).some(Boolean)
+    if (!anyChecked) {
+      setError(CHECKBOX_GROUP, { type: 'required', message: 'Please select at least one service.' })
+      return
+    }
+
     try {
       const res = await fetch(`/api/contact-form`, {
         method: 'POST',
@@ -59,15 +70,12 @@ const Contact01 = ({ main = {} }) => {
           credentials: 'same-origin',
         }),
       })
-      if (res.status === 201) {
-        return true
-      }
       const json = await res.json()
       if (json.error) {
-        throw json.error
+        throw new Error(json.error)
       }
     } catch (error) {
-      setError('service', { type: 'serviceSideError', message: error })
+      setError('service', { type: 'serviceSideError', message: error.message })
     }
   }
 
@@ -76,6 +84,13 @@ const Contact01 = ({ main = {} }) => {
       clearErrors('service')
     }
   }, [isValidating, errors.service, clearErrors])
+
+  const getValidation = (input) => {
+    if (input.type === 'checkbox') return {}
+    return {
+      required: input.required ? `${input.placeholder || input.label || 'This field'} is required` : false,
+    }
+  }
 
   return (
     <div className="my-auto p-3 md:p-6 lg:p-12">
@@ -95,28 +110,43 @@ const Contact01 = ({ main = {} }) => {
               <div className="relative overflow-hidden shadow">
                 {isSubmitSuccessful && <SuccessMessage />}
                 <div className="bg-gradient-omega-900">
-                  {inputs?.map(({ legend, columns, fields }, i) => (
-                    <fieldset key={i} className="border-b border-dashed border-omega-700">
-                      <div className="bg-omega-800 p-5">
-                        <legend className="m-0 p-0">{legend}</legend>
-                      </div>
-                      <div
-                        className={classNames('grid gap-2 p-5', {
-                          'md:grid-cols-2': columns === 2,
-                          'md:grid-cols-3': columns === 3,
-                        })}
-                      >
-                        {fields.map((input, j) => {
-                          const Component = FormComponent[input.type]
-                          return input.type && Component ? (
-                            <div key={(input.id || input.name) + j} className="flex items-center">
-                              <Component {...input} {...register(input.id || input.name)} />
-                            </div>
-                          ) : null
-                        })}
-                      </div>
-                    </fieldset>
-                  ))}
+                  {inputs?.map(({ legend, columns, fields }, i) => {
+                    const isCheckboxGroup = fields.every((f) => f.type === 'checkbox')
+                    return (
+                      <fieldset key={i} className="border-b border-dashed border-omega-700">
+                        <div className="bg-omega-800 p-5">
+                          <legend className="m-0 p-0">{legend}</legend>
+                        </div>
+                        <div
+                          className={classNames('grid gap-2 p-5', {
+                            'md:grid-cols-2': columns === 2,
+                            'md:grid-cols-3': columns === 3,
+                          })}
+                        >
+                          {fields.map((input, j) => {
+                            const Component = FormComponent[input.type]
+                            return input.type && Component ? (
+                              <div key={(input.id || input.name) + j} className="flex items-center">
+                                <Component
+                                  {...input}
+                                  {...register(input.id || input.name, getValidation(input))}
+                                  hasError={!!errors[input.id || input.name]}
+                                />
+                              </div>
+                            ) : null
+                          })}
+                        </div>
+                        {isCheckboxGroup && <ErrorMessage errors={errors} name={CHECKBOX_GROUP} />}
+                        {fields.map((input) => (
+                          <ErrorMessage
+                            key={input.id || input.name}
+                            errors={errors}
+                            name={input.id || input.name}
+                          />
+                        ))}
+                      </fieldset>
+                    )
+                  })}
                 </div>
                 <div className="bg-omega-900 px-4 pt-6 pb-8 text-left md:px-8">
                   <ErrorMessage errors={errors} name="service" />
@@ -127,7 +157,7 @@ const Contact01 = ({ main = {} }) => {
                     className="w-full sm:w-1/3"
                     disabled={isSubmitting}
                   >
-                    Submit
+                    {isSubmitting ? 'Sending…' : 'Submit'}
                   </Button>
                 </div>
               </div>
