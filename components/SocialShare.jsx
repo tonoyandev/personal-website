@@ -20,7 +20,7 @@ const SocialShare = (props) => {
   return (
     <div
       className={classNames(
-        'flex flex items-center space-x-2 pt-6 md:flex-col md:space-x-0 md:space-y-2',
+        'flex items-center space-x-2 pt-6 md:flex-col md:space-x-0 md:space-y-2',
         className
       )}
       {...rest}

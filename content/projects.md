@@ -2,7 +2,7 @@
 layout: Projects
 seo:
   title: Web Development Projects
-  description: Projects page
+  description: Open-source work and selected client projects — blockchain protocols, smart contract tooling and web applications built by Ararat Tonoyan.
 ---
 
 ---github
@@ -13,7 +13,7 @@ repositories:
 ---
 
 <PageTitle>
-  ### My Open-Source Projects
+  # My Open-Source Projects
 </PageTitle>
 
 Discover my most popular open-source projects on Github.
@@ -27,7 +27,7 @@ collection:
 ---
 
 <PageTitle>
-  ### Latest Projects
+  ## Latest Projects
 </PageTitle>
 
 I have transformed ideas into remarkable digital products.

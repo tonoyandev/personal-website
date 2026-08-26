@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'clsx'
-import { Image, CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
+import NextImage from 'next/image'
+import { CarouselProvider, DotGroup, Slide, Slider } from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 const ImageCarousel = (props) => {
@@ -36,17 +37,19 @@ const ImageCarousel = (props) => {
       totalSlides={images.length}
       naturalSlideWidth={440}
       naturalSlideHeight={300}
-      hasMasterSpinner
       infinite
-      isPlaying
     >
+      {/* next/image lazy-loads and serves resized WebP; the carousel's own Image
+          component renders eager, full-size <img> tags for every slide at once. */}
       <Slider>
-        {images.map((image, i) => (
-          <Slide key={i} className="cursor-pointer">
-            <Image
+        {images.map((image) => (
+          <Slide key={image.src}>
+            <NextImage
               src={image.src}
               alt={image.alt}
-              className="m-0 h-auto w-full object-contain object-center"
+              fill
+              sizes="(max-width: 640px) 92vw, 30vw"
+              className="m-0 object-contain object-center"
             />
           </Slide>
         ))}

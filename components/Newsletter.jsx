@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import FormInput from '@/components/FormInput'
 import Button from '@/components/Button'
 import { IoClose } from 'react-icons/io5'
+import { config } from '../theme.config'
 
 const IntroMessage = () => (
   <div className="prose dark:prose-invert">
@@ -23,7 +24,7 @@ const ErrorMessage = ({ errors, name }) =>
   ) : null
 
 const SuccessMessage = ({ handleReset }) => (
-  <div className="my-6 mx-auto flex max-w-md justify-between bg-omega-800 p-3">
+  <div className="mx-auto my-6 flex max-w-md justify-between bg-omega-800 p-3">
     <span className="text-alpha">Please check your inbox and confirm your email.</span>
     <button onClick={() => handleReset()} className="h-5 w-5 hover:bg-omega-900">
       <IoClose className="mx-auto h-4 w-4 text-omega-500" />
@@ -39,7 +40,20 @@ const Newsletter = ({ className }) => {
     reset,
   } = useForm()
 
-  const onSubmit = async () => {}
+  const formId = config.convertKit?.newsletterFormId
+
+  const onSubmit = async ({ email }) => {
+    const res = await fetch(`https://app.convertkit.com/forms/${formId}/subscriptions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ email_address: email }),
+    })
+    if (!res.ok) throw new Error('Subscription failed. Please try again.')
+  }
+
+  // Without a form id there is nothing to subscribe to, so render nothing rather
+  // than a form that silently discards the address and reports success.
+  if (!formId) return null
 
   return (
     <div className={className}>

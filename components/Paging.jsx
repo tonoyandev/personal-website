@@ -15,11 +15,18 @@ const Paging = ({ totalPages, currentPage, slug, infinite = false }) => {
   })
 
   React.useEffect(() => {
-    router.events.on('routeChangeStart', () => setIsFetching(true))
-    router.events.on('routeChangeComplete', () => setIsFetching(false))
+    // off() only removes a listener when given the same reference that was passed to on().
+    const handleStart = () => setIsFetching(true)
+    const handleDone = () => setIsFetching(false)
+
+    router.events.on('routeChangeStart', handleStart)
+    router.events.on('routeChangeComplete', handleDone)
+    router.events.on('routeChangeError', handleDone)
+
     return () => {
-      router.events.off('routeChangeStart')
-      router.events.off('routeChangeComplete')
+      router.events.off('routeChangeStart', handleStart)
+      router.events.off('routeChangeComplete', handleDone)
+      router.events.off('routeChangeError', handleDone)
     }
   }, [router.events])
 
@@ -47,7 +54,7 @@ const Paging = ({ totalPages, currentPage, slug, infinite = false }) => {
   return (
     <div ref={inViewRef}>
       <div className="mt-10 text-center">
-        <div className="block flex h-10 items-center justify-center text-omega-500">
+        <div className="flex h-10 items-center justify-center text-omega-500">
           {isFetching && <Loader />}
         </div>
         <div className="my-4"></div>

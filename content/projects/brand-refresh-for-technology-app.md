@@ -27,7 +27,7 @@ attributes:
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.
 
-### Paragraphs
+## Paragraphs
 
 To create paragraphs, use a blank line to separate one or more lines of text like this:
 
@@ -37,11 +37,11 @@ Second paragraph. *Italic*, **bold**, ~~strikethrough~~, Emoji 😂 ⛺, and `mo
 
 ---
 
-### Headings
+## Headings
 
 To create a heading, add number signs (#) in front of a word or phrase. The number of number signs you use should correspond to the heading level. For example, to create a heading level three (`<h3>`), use three number signs (e.g., `### My Header`).
 
-# Heading level 1
+## Heading level 1
 
 ## Heading level 2
 
@@ -55,7 +55,7 @@ To create a heading, add number signs (#) in front of a word or phrase. The numb
 
 ---
 
-### Code-Block
+## Code-Block
 
 The Markdown syntax allows you to create code blocks by indenting lines by four spaces or one tab. If you find that inconvenient, try using fenced code blocks. To do that, you’ll use three backticks (```) on the lines before and after the code block. The best part? You don’t have to indent any lines!
 
@@ -128,7 +128,7 @@ This will render the Newsletter component:
 <Newsletter className="bg-omega-800 p-10" />
 ---
 
-### Images
+## Images
 
 To add an image, add an exclamation mark (!), followed by alt text in brackets, and the path or URL to the image asset in parentheses. You can optionally add a title in quotation marks after the path or URL.
 
@@ -172,7 +172,7 @@ This will render below embed:
 
 ---
 
-### Tables
+## Tables
 
 To add a table, use three or more hyphens (---) to create each column’s header, and use pipes (|) to separate each column. For compatibility, you should also add a pipe on either end of the row.
 
@@ -193,7 +193,7 @@ You can align text in the columns to the left, right, or center by adding a colo
 
 ---
 
-### Lists
+## Lists
 
 You can organize items into ordered and unordered lists.
 
@@ -255,7 +255,7 @@ doc](#code-block).
 
 ---
 
-### Blockquotes
+## Blockquotes
 
 To create a blockquote, add a > in front of a paragraph. The rendered output looks like this:
 

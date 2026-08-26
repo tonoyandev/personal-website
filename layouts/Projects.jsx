@@ -6,7 +6,7 @@ import Reveal from '@/components/Reveal'
 const Layout = ({ projects, github }) => {
   return (
     <div className="mx-auto p-3 md:p-6 lg:p-12">
-      <div className="prose prose-headings:mb-4 dark:prose-invert">
+      <div className="prose dark:prose-invert prose-headings:mb-4">
         <ContentRenderer source={github} />
         <div className="mt-4 grid grid-cols-fluid gap-4 [--tw-fluid-col-min:15rem] md:mt-12 md:gap-6">
           {github?.repositories?.records?.map((item, i) => (

@@ -7,11 +7,9 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-led-gelato-lit-protocols.png
-    alt: led-gelato-lit-protocols
+    alt: Cover illustration for the LED, Gelato and Lit protocols
 featured: true
 ---
-
-# Using Web3 Functions - LED by Chainlink, Gelato, and Lit Protocol
 
 Hello, code-slinging comrades! Buckle up because we're about to embark on a thrill-packed, mind-bending escapade through the vast expanse of Web3. This isn't your average walk in the park. We're diving deep into the oceanic depths of Chainlink, Gelato, and Lit protocol. If you thought our previous journey was fun, you ain't seen nothing yet.
 

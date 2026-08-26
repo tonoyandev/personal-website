@@ -32,7 +32,7 @@ const MenuItem = ({ name, Icon, text, slug, number, isOpen, toggleMenu, ...rest 
         {number}
       </div>
     )}
-    <span className="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block" />
+    <span className="absolute right-0 top-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block" />
     {Icon && <Icon className="relative z-20 h-6 w-6" />}
     {text && <div className="relative z-20 h-6 text-lg font-extrabold">{text}</div>}
     <span className="mt-1 text-center text-xs md:hidden">{name}</span>
@@ -62,8 +62,9 @@ const Menu = () => {
   return (
     <>
       <div
+        aria-hidden="true"
         className={classNames(
-          'fixed top-0 left-0 z-10 block w-full animate-fade-in bg-black/90 md:hidden',
+          'fixed left-0 top-0 z-10 block w-full animate-fade-in bg-black/90 md:hidden',
           isOpen ? 'h-screen' : 'h-0'
         )}
         onClick={closeMenu}
@@ -79,36 +80,43 @@ const Menu = () => {
         )}
       >
         {menu && (
-          <div
+          <nav
+            id="site-menu"
+            aria-label="Main"
             className={classNames(
-              'grid w-full  bg-gradient-to-b from-transparent to-omega-800 md:block',
+              'grid w-full bg-gradient-to-b from-transparent to-omega-800 md:block',
               isOpen ? 'grid-cols-3' : 'grid-cols-4'
             )}
           >
             {menu &&
               menu.map((item) => <MenuItem {...item} key={`${item.slug}`} onClick={closeMenu} />)}
-            <div
+            <button
+              type="button"
+              onClick={toggleMenu}
+              aria-expanded={isOpen}
+              aria-controls="site-menu"
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
               className={classNames(
                 'row-start-1 flex h-16 items-center md:hidden',
+                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-alpha',
                 isOpen ? 'col-span-3 col-start-1' : 'bg-gradient-omega-900 col-start-4'
               )}
-              onClick={toggleMenu}
             >
-              <span className="md:none mx-auto block text-7xl text-omega-100">
+              <span className="mx-auto block text-7xl text-omega-100">
                 {isOpen ? (
                   <BiChevronDown className="animate-grow-in" />
                 ) : (
                   <BiDotsHorizontalRounded className="animate-grow-in" />
                 )}
               </span>
-            </div>
-          </div>
+            </button>
+          </nav>
         )}
 
         {social && (
           <div className="bg-social-menu flex w-full flex-wrap md:block md:bg-omega-800">
-            {social.map((item, i) => (
-              <SocialLink key={`${i}-social`} {...item} />
+            {social.map((item) => (
+              <SocialLink key={item.name} {...item} />
             ))}
           </div>
         )}

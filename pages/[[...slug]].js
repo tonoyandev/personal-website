@@ -4,6 +4,7 @@ import Seo from '@/components/Seo'
 import Layout from '@/components/Layout'
 import layouts from '@/layouts/index'
 import { getPaths, getPageBySlug, generateCollectionRss } from '@/lib/mdx'
+import getMdxOptions from '@/lib/mdx-options'
 import { siteMetaData } from '../theme.config'
 
 // Fetch data at build time
@@ -14,14 +15,19 @@ export async function getStaticProps({ params }) {
   const pageIndex = slug.indexOf('page')
 
   if (pageIndex !== -1) {
-    currentPage = parseInt(slug[pageIndex + 1])
+    currentPage = parseInt(slug[pageIndex + 1], 10)
     slug = slug.slice(0, pageIndex)
+
+    if (!Number.isFinite(currentPage) || currentPage < 1) {
+      return { notFound: true }
+    }
   }
 
-  let page = await getPageBySlug(slug)
+  const page = await getPageBySlug(slug)
 
+  // Unknown slugs must answer with a real 404, not a 200 carrying not-found content.
   if (!page) {
-    page = await getPageBySlug(['not-found'])
+    return { notFound: true }
   }
 
   const props = { page }
@@ -48,9 +54,6 @@ export async function getStaticProps({ params }) {
     }
   }
 
-  // Generate RSS feed for collections
-  await generateCollectionRss(slug)
-
   return { props }
 }
 
@@ -59,22 +62,31 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const pages = await getPaths()
 
-  const paths = pages.map((page) => ({
-    params: {
-      slug: page.slug,
-    },
-  }))
+  // Generate the RSS/JSON feeds once per build. This used to run inside getStaticProps,
+  // which writes to public/ at request time on a read-only serverless filesystem.
+  const { collections } = getMdxOptions()
+  await Promise.all(collections.map((collectionSlug) => generateCollectionRss(collectionSlug)))
 
-  return { paths, fallback: true }
+  const paths = pages
+    // `/not-found` is rendered by pages/404.js, so it must not be a real route of its own.
+    .filter((page) => !(page.slug.length === 1 && page.slug[0] === 'not-found'))
+    .map((page) => ({
+      params: {
+        slug: page.slug,
+      },
+    }))
+
+  // Every route is enumerable at build time, so unknown URLs fall through to the 404 page.
+  return { paths, fallback: false }
 }
 
 export default function Page({ pagination, page = {} }) {
   const { meta = {}, ...content } = page
   const router = useRouter()
 
-  const layout = router.isFallback ? 'Fallback' : meta.layout
-  const DynamicLayout = layouts[layout]
-  const pageUrl = siteMetaData.siteUrl + router.asPath
+  const DynamicLayout = layouts[meta.layout]
+  // Strip query/hash so canonical and og:url stay stable across tracking parameters.
+  const pageUrl = siteMetaData.siteUrl + router.asPath.split('?')[0].split('#')[0]
 
   if (!DynamicLayout) return null
 

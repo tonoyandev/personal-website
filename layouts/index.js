@@ -9,9 +9,8 @@ const layouts = {
   Blog: dynamic(() => import(`@/layouts/Blog`)),
   Projects: dynamic(() => import(`@/layouts/Projects`)),
   Reviews: dynamic(() => import(`@/layouts/Reviews`)),
-  Fallback: dynamic(() => import(`@/layouts/Fallback`)),
   Blank: dynamic(() => import(`@/layouts/Blank`)),
-  BlankCentered: dynamic(() => import(`@/layouts/BlankCenter`)),
+  BlankCenter: dynamic(() => import(`@/layouts/BlankCenter`)),
 }
 
 export default layouts

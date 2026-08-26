@@ -7,18 +7,16 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-erc20-merkle-tree-airdrop-dapp.png
-    alt: erc20-merkle-tree-airdrop-dapp
+    alt: Cover illustration for an ERC20 Merkle tree airdrop dapp
 featured: true
 ---
 
-
-# So, You Want to Build an ERC20 Merkle Tree Airdrop Dapp?
 
 Ever woken up one fine morning and thought to yourself, "Oh, I wish I could build an ERC20 Merkle Tree Airdrop Dapp today"? No? Just me? Well, if you're still here, I'll assume you're mildly interested. Strap in, because we're about to embark on a roller coaster of JavaScript, Solidity, and some good ol' crypto jargon!
 
 By the way, I hope you've had your coffee, because we're diving straight into the deep end.
 
-<img src="https://media.giphy.com/media/l2Je66zG6mAAZxgqI/giphy.gif" alt="Deep end GIF" width="500" />
+<img src="https://media.giphy.com/media/l2Je66zG6mAAZxgqI/giphy.gif" alt="Diving straight into the deep end of a pool" width="500" height="381" loading="lazy" />
 
 ## Step 1: Understand What the Heck We're Building 
 
@@ -72,7 +70,7 @@ contract AirdropToken is ERC20 {
 
 Our `claim` function lets a user provide a Merkle proof. If the proof is correct, we mint them some sweet, sweet tokens.
 
-<img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="500" />
+<img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="500" height="500" loading="lazy" alt="Coins raining down" />
 
 ## Step 3: Setting Up Our React.js Frontend
 
@@ -131,7 +129,7 @@ export default ClaimTokens;
 
 Don't forget to replace `'your_contract_address'` with the actual address of your deployed contract!
 
-<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" alt="Coding end GIF" width="500" />
+<img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" alt="Typing furiously at a keyboard" width="500" height="279" loading="lazy" />
 
 
 ## Step 4: Creating the Merkle Tree with Node.js
@@ -161,12 +159,10 @@ console.log('Your Merkle Root:', root);
 
 Just pass your data as a JSON array of objects, each with an `address` and an `amount` field, in a file named `data.json`. The script will spit out your Merkle root!
 
-<img src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif" alt="Magic GIF" width="500" />
-
 ## Step 5: Celebrate!
 
 Congrats! You've built an ERC20 Merkle Tree Airdrop Dapp with React.js and Solidity! Give yourself a pat on the back, crack open a cold one, or do a happy dance.
 
-<img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Happy dance GIF" width="500" />
+<img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Someone doing a happy dance" width="500" height="279" loading="lazy" />
 
 Remember, folks: if it compiles, it's good. If it runs, it's perfect! Until next time, happy coding!

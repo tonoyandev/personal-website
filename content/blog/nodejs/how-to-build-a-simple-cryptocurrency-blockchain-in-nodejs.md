@@ -7,14 +7,12 @@ tags:
   - node-js
 images:
   - src: /photos/blog-how-to-build-a-simple-cryptocurrency-blockchain-in-nodejs.png
-    alt: how-to-build-a-simple-cryptocurrency-blockchain-in-nodejs
+    alt: Cover illustration for building a cryptocurrency blockchain in Node.js
 featured: true
 ---
-# **How To Build A Simple Cryptocurrency Blockchain In Node.js: Your Unnecessarily-Entertaining Guide**
-
 Hello, readers! Have you ever been sitting at your computer, gazing out the window, and thought, "Gosh, wouldn't life be grand if I could build a cryptocurrency blockchain in Node.js?" Well, today's your lucky day, my friend! Get ready for a rollercoaster ride that's going to take you from the ordinary world of API endpoints to the mysterious realm of decentralized ledger technology. It's time to chain some blocks together and create our very own crypto! For this tutorial, let's call our cryptocurrency "NodeCoin".
 
-<img src="https://media.giphy.com/media/LHZyixOnHwDDy/giphy.gif" width="500px" />
+<img src="https://media.giphy.com/media/LHZyixOnHwDDy/giphy.gif" width="500" height="375" loading="lazy" alt="Someone typing enthusiastically at a computer" />
 
 *Yes, exactly like that.*
 
@@ -157,7 +155,7 @@ node main.js
 
 If you see the console message, then congrats! You're a master of Express servers!
 
-<img src="https://media.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/giphy.gif" width="500px" />
+<img src="https://media.giphy.com/media/xTiTnHXbRoaZ1B1Mo8/giphy.gif" width="500" height="282" loading="lazy" alt="A person celebrating a small victory" />
 
 *You right now.*
 
@@ -181,7 +179,7 @@ Now you have the power to view your blockchain in all its glory and add new bloc
 
 And there you have it, folks! You've successfully built a simple cryptocurrency blockchain in Node.js. Yes, it's a basic blockchain, but it's a start. And like any good developer, you're only limited by your imagination (and, well, computational power). So, go ahead and build the next Bitcoin. Or Dogecoin. Or NodeCoin. Or... well, you get the point.
 
-<img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" width="500px" />
+<img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" width="500" height="250" loading="lazy" alt="Money raining down on a celebrating person" />
 
 *You when NodeCoin takes over the world.*
 

@@ -41,3 +41,5 @@ feed.xml
 robots.txt
 sitemap.xml
 sitemap-[0-9]*.xml
+# Local agent/workspace files
+.claude

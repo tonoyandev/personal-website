@@ -2,7 +2,7 @@
 layout: Contact
 seo:
   title: Contact Me
-  description: Contact me page
+  description: Start a conversation about your blockchain project — protocol architecture, smart contract development, security review or engineering leadership.
 ---
 
 
@@ -11,9 +11,9 @@ seo:
 ---
 
 <PageTitle>
-  ### Get in touch
+  # Get in touch
 
-  ### _Let's talk about your project_
+  ## _Let's talk about your project_
 </PageTitle>
 
 Thinking about a new project, a problem to solve, or just want to connect? Let's do it!

@@ -7,11 +7,9 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-optimizing-transaction-costs-in-solidity.png
-    alt: optimizing-transaction-costs-in-solidity
+    alt: Cover illustration for optimizing transaction costs in Solidity
 featured: true
 ---
-
-# Calculating and Optimizing Transaction Costs in Solidity
 
 In the realm of Ethereum, transaction costs are a central concern. They dictate the feasibility and the economic sense of deploying and interacting with smart contracts. As Solidity developers, we need to understand how to calculate these costs and optimize them to ensure that our dApps are not only functional but also economically efficient.
 

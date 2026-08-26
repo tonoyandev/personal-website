@@ -9,7 +9,7 @@ import { IoCalendarOutline } from 'react-icons/io5'
 const BlogCardVertical = ({ className, title, images, slug, description, date, tags }) => (
   <div
     className={classNames(
-      'group prose prose-zinc block flex flex-col',
+      'group prose prose-zinc flex flex-col',
       'from-omega-900 via-omega-900 to-omega-800 dark:prose-invert dark:sm:bg-gradient-to-b dark:sm:shadow-md',
       className
     )}
@@ -40,9 +40,9 @@ const BlogCardVertical = ({ className, title, images, slug, description, date, t
         ))}
       </div>
       <Link href={slug.join('/')} aria-label={title}>
-        <h5 className="my-4 transition-colors group-hover:text-accent dark:group-hover:text-alpha">
+        <h2 className="my-4 text-xl font-bold transition-colors group-hover:text-accent dark:group-hover:text-alpha md:text-2xl">
           {title}
-        </h5>
+        </h2>
       </Link>
       <small className="mb-4 text-omega-400">{description}</small>
       {date && (

@@ -42,7 +42,7 @@ const ProjectCardHorizontal = ({
               fill
             />
             {images[0].overlay && (
-              <div className="absolute top-0 right-4 z-10 h-full w-full">
+              <div className="absolute right-4 top-0 z-10 h-full w-full">
                 <Image
                   src={images[0].overlay.src}
                   alt={images[0].overlay.alt || title}
@@ -65,12 +65,12 @@ const ProjectCardHorizontal = ({
           <Icon {...logo} className="h-full w-36 fill-current text-omega-400" />
         </div>
       ) : (
-        <h6 className="text-omega-400">{logo.alt}</h6>
+        <p className="m-0 text-lg font-bold text-omega-400 md:text-xl">{logo.alt}</p>
       )}
       <Link href={slug.join('/')} aria-label={title}>
-        <h4 className="mt-6 transition-colors group-hover:text-accent dark:group-hover:text-alpha">
+        <h2 className="mt-6 text-2xl font-bold transition-colors group-hover:text-accent dark:group-hover:text-alpha md:text-3xl">
           {title}
-        </h4>
+        </h2>
       </Link>
       <small className="mt-6 block">{description}</small>
       {tags && (

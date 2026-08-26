@@ -20,22 +20,25 @@ const FormInput = React.forwardRef((props, ref) => {
   }
 
   const Component = tags[type]
+  // Fields declared in contact-form.json carry a name but no id, so derive one
+  // value for both ends of the label association.
+  const fieldId = id || name
 
   return (
     <>
       {label && (
-        <label htmlFor={name} className="block">
+        <label htmlFor={fieldId} className="block">
           {label}
         </label>
       )}
       <Component
         type={inputType || type}
         ref={ref}
-        id={id}
+        id={fieldId}
         name={name}
         autoComplete={autoComplete}
         className={classNames(
-          'block w-full border-0 py-3 px-4',
+          'block w-full border-0 px-4 py-3',
           'border-b bg-omega-700/20  placeholder-omega-400',
           hasError
             ? 'border-red-500 focus:border-0 focus:ring-red-500'

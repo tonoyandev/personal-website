@@ -3,7 +3,7 @@ layout: Blog
 title: Node.js
 seo:
   title: Node.js Articles
-  description: Note.js blog page
+  description: Node.js articles on backend architecture, secure password flows, scaling applications and building blockchain tooling in JavaScript.
 collection:
   path: /blog
   recordsPerPage: 9
@@ -15,6 +15,6 @@ collection:
         - node-js
 ---
 
-### Node.js Articles
+# Node.js Articles
 
 Node.js is an open-source, cross-platform JavaScript runtime environment.

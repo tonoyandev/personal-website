@@ -2,20 +2,20 @@
 layout: Home
 seo:
   title: Blockchain and Web Specialist
-  description: Homepage
+  description: Blockchain architecture, smart contract development and security audits by Ararat Tonoyan — a top-rated Web3 and Ethereum consultant with 10+ years of engineering experience.
 ---
 
 ---main
 images:
   - src: /hero.png
-    alt: ararat tonoyan photo
-  - src: /hero-mobile.png
-    alt: ararat tonoyan photo
+    alt: Portrait of Ararat Tonoyan, blockchain consultant
+  - src: /hero.png
+    alt: Portrait of Ararat Tonoyan, blockchain consultant
 ---
 
 # <Typewriter>Ararat Tonoyan</Typewriter>
 
-# *Blockchain Expert*
+## *Blockchain Expert*
 
 Blockchain architecture and engineering leadership — built for organizations where the margin for error is zero.
 
@@ -48,7 +48,7 @@ if (have_a_project) navigate('/contact')
 
 ---cta
 ---
-<Button href="/Web3_Engineer_Ararat_Tonoyan_CV.pdf" target="_blank" rel="noopener" size="lg">
+<Button href="/Ararat-Tonoyan-Solidity-Web-Developer-Resume.pdf" target="_blank" rel="noopener" size="lg">
   Download Resume
 </Button>
 

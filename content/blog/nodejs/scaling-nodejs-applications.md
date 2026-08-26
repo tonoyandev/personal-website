@@ -7,11 +7,9 @@ tags:
   - node-js
 images:
   - src: /photos/blog-scaling-nodejs-applications.png
-    alt: scaling-nodejs-applications
+    alt: Cover illustration for scaling Node.js applications
 featured: true
 ---
-
-# Scaling Node.js Applications: From Humble Zero to Dashing Hero
 
 Hello, dear web enthusiasts,
 

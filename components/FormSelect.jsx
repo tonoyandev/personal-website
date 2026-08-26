@@ -17,7 +17,7 @@ const FormSelect = React.forwardRef((props, ref) => {
         name={name}
         autoComplete={autoComplete}
         className={classNames(
-          'block w-full border-0 py-3 px-4',
+          'block w-full border-0 px-4 py-3',
           'border-b bg-omega-700/20  placeholder-omega-400',
           hasError
             ? 'border-red-500 focus:border-0 focus:ring-red-500'
