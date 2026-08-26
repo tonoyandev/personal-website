@@ -17,17 +17,3 @@ repositories:
 </PageTitle>
 
 Discover my most popular open-source projects on Github.
-
-
-
----projects
-collection:
-  path: /projects
-  sortBy: date
----
-
-<PageTitle>
-  ## Latest Projects
-</PageTitle>
-
-I have transformed ideas into remarkable digital products.

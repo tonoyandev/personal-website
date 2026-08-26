@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import MDXComponents from '@/components/MDX'
 import '@/styles/globals.css'

@@ -105,7 +105,7 @@ export const mdxConfig = {
   publicDir: 'public',
   pagesDir: 'content',
   fileExt: '.md',
-  collections: ['/blog', '/projects'],
+  collections: ['/blog'],
   remarkPlugins: [],
   rehypePlugins: [],
 }
