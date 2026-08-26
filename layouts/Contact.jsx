@@ -67,11 +67,9 @@ const Contact01 = ({ main = {} }) => {
     try {
       const res = await fetch(`/api/contact-form`, {
         method: 'POST',
+        credentials: 'same-origin',
         body: JSON.stringify(data),
-        headers: new Headers({
-          'Content-Type': 'application/json',
-          credentials: 'same-origin',
-        }),
+        headers: { 'Content-Type': 'application/json' },
       })
       const json = await res.json()
       if (json.error) {
@@ -91,7 +89,9 @@ const Contact01 = ({ main = {} }) => {
   const getValidation = (input) => {
     if (input.type === 'checkbox') return {}
     return {
-      required: input.required ? `${input.placeholder || input.label || 'This field'} is required` : false,
+      required: input.required
+        ? `${input.placeholder || input.label || 'This field'} is required`
+        : false,
     }
   }
 
@@ -110,6 +110,15 @@ const Contact01 = ({ main = {} }) => {
         >
           <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)}>
+              {/* Honeypot: hidden from users, bots fill it and get silently discarded. */}
+              <input
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+                {...register('website')}
+              />
               <div className="relative overflow-hidden shadow">
                 {isSubmitSuccessful && <SuccessMessage />}
                 <div className="bg-gradient-omega-900">
@@ -151,7 +160,7 @@ const Contact01 = ({ main = {} }) => {
                     )
                   })}
                 </div>
-                <div className="bg-omega-900 px-4 pt-6 pb-8 text-left md:px-8">
+                <div className="bg-omega-900 px-4 pb-8 pt-6 text-left md:px-8">
                   <ErrorMessage errors={errors} name="service" />
                   <Button
                     as="button"

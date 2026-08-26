@@ -1,14 +1,9 @@
 import React from 'react'
-import { useFormContext } from 'react-hook-form'
 
+// Uses the handlers supplied by react-hook-form's register() and sets no `value`
+// attribute, so the form state holds a real boolean and unchecking clears it.
 const FormCheckbox = React.forwardRef((props, ref) => {
-  const { id, label, value, type = 'checkbox', name } = props
-  const { setValue } = useFormContext()
-
-  const handleChange = (e) => {
-    const { value, checked } = e.target
-    setValue(e.target.name, value ? value : checked)
-  }
+  const { id, label, type = 'checkbox', name, onChange, onBlur } = props
 
   return (
     <>
@@ -17,9 +12,9 @@ const FormCheckbox = React.forwardRef((props, ref) => {
         id={id}
         name={name}
         type={type}
-        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
         className="h-6 w-6 border-omega-300 text-accent-600 outline-none"
-        onChange={handleChange}
       />
       <label htmlFor={id} className="ml-3 block">
         {label}

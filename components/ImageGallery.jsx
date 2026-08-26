@@ -75,29 +75,37 @@ const ImageGallery = (props) => {
           />
 
           {thumbsToShow > 1 && (
-            <div
+            <button
+              type="button"
               onClick={() => setActiveIndex(i)}
+              aria-label={`View ${image.alt || 'image'} full size`}
               className={classNames(
                 'absolute inset-0 flex cursor-pointer flex-col items-center',
-                'opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100'
+                'opacity-0 backdrop-blur-sm transition-opacity group-hover:opacity-100',
+                'focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alpha'
               )}
             >
               <IoEyeSharp className="mt-auto text-3xl invert" />
               <figcaption className="mt-auto w-full">{image.alt}</figcaption>
-            </div>
+            </button>
           )}
         </div>
       ))}
       {images.length > thumbsToShow && (
-        <div
+        <button
+          type="button"
           onClick={() => setActiveIndex(0)}
+          aria-label={`View all ${images.length} images`}
           className={classNames(
             'flex cursor-pointer items-center justify-center',
-            'border border-transparent bg-omega-800 hover:border-omega-600'
+            'border border-transparent bg-omega-800 hover:border-omega-600',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-alpha'
           )}
         >
-          <h6 className="m-0 text-omega-300">+{images.length - thumbsToShow}</h6>
-        </div>
+          <span className="m-0 text-lg font-bold text-omega-300 md:text-xl">
+            +{images.length - thumbsToShow}
+          </span>
+        </button>
       )}
 
       {activeIndex !== null && (
@@ -126,9 +134,9 @@ const ImageGallery = (props) => {
                       src={image.src}
                       alt={image.alt}
                       fill
+                      sizes="100vw"
                       className="object-scale-down object-top"
                       animation="fade-in zoom-out"
-                      quality={100}
                     />
                     {image.alt && (
                       <figcaption className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-black px-6 py-1 text-white">
@@ -139,14 +147,14 @@ const ImageGallery = (props) => {
                 ))}
               </Slider>
 
-              <Button as={ButtonBack} className="absolute top-1/2 left-2 z-10 -translate-y-1/2">
+              <Button as={ButtonBack} className="absolute left-2 top-1/2 z-10 -translate-y-1/2">
                 <IoChevronBackSharp className="text-4xl" />
               </Button>
-              <Button as={ButtonNext} className="absolute top-1/2 right-2 z-10 -translate-y-1/2">
+              <Button as={ButtonNext} className="absolute right-2 top-1/2 z-10 -translate-y-1/2">
                 <IoChevronForwardSharp className="text-4xl" />
               </Button>
             </CarouselProvider>
-            <Button className="absolute top-2 right-2 z-10" onClick={handleClose}>
+            <Button className="absolute right-2 top-2 z-10" onClick={handleClose}>
               <IoCloseSharp className="text-4xl" />
               ESC
             </Button>

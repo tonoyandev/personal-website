@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import MDXComponents from '@/components/MDX'
 import '@/styles/globals.css'
 
@@ -11,11 +13,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+        {/* No maximum-scale/user-scalable: blocking pinch zoom fails WCAG 1.4.4. */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <MDXProvider components={MDXComponents}>
         {getLayout(<Component {...pageProps} />)}
       </MDXProvider>
+      <Analytics />
+      <SpeedInsights />
     </>
   )
 }

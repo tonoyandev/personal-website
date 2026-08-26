@@ -7,11 +7,9 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-top-10-smart-contracts-bugs.png
-    alt: top-10-smart-contracts-bugs
+    alt: Cover illustration for the top 10 Solidity smart contract bugs
 featured: true
 ---
-
-# Top 10 Most Common Bugs in Smart Contracts
 
 Smart contracts are a cornerstone of the blockchain revolution, but they're not without their risks. Below, I outline the top 10 most popular bugs in smart contracts that have been exploited by hackers to steal money, including code examples and prevention strategies.
 

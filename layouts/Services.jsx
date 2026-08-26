@@ -8,7 +8,12 @@ const Services01 = ({ main = {}, services = [] }) => (
     <div className="flex flex-col items-center">
       <div className="grid gap-4 md:grid-cols-3 md:gap-12">
         <div className="col-span-1 row-span-2 mb-6 md:m-0">
-          <Reveal animation="fade-in slide-in-right" className="prose prose-invert" delay={200}>
+          {/* Section labels are h2 for semantics, shown at their original small scale. */}
+          <Reveal
+            animation="fade-in slide-in-right"
+            className="prose prose-invert [&_h2]:text-lg [&_h2]:font-bold md:[&_h2]:text-xl"
+            delay={200}
+          >
             <ContentRenderer source={main} />
           </Reveal>
         </div>
@@ -23,7 +28,7 @@ const Services01 = ({ main = {}, services = [] }) => (
               {item.icon && (
                 <Icon {...item.icon} className="relative z-10 mb-6 h-12 w-12 fill-accent" />
               )}
-              <h4 className="relative z-10 m-0">{item.title}</h4>
+              <h3 className="relative z-10 m-0 text-2xl font-bold md:text-3xl">{item.title}</h3>
             </div>
             <div className="p-8 pt-3">
               <ContentRenderer source={item} />

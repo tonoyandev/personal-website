@@ -6,7 +6,6 @@
  * Icons from react-icons: https://react-icons.github.io/react-icons
  */
 
-
 import { IoLogoLinkedin } from 'react-icons/io5'
 import { SiTelegram, SiUpwork } from 'react-icons/si'
 import { TfiHome, TfiPencilAlt } from 'react-icons/tfi'
@@ -68,7 +67,7 @@ export const social = [
     name: 'Upwork',
     url: 'https://www.upwork.com/freelancers/tonoyandev',
     Icon: SiUpwork,
-  }
+  },
 ]
 
 /**
@@ -86,6 +85,9 @@ export const config = {
   },
   convertKit: {
     tipUrl: 'https://fantastic-mover-3439.ck.page/products/blog',
+    // Set this to a ConvertKit form id to enable the newsletter signup.
+    // While it is empty the newsletter block is not rendered at all.
+    newsletterFormId: '',
   },
   contactForm: {
     inputs: require('./content/contact-form.json'),
@@ -103,7 +105,7 @@ export const mdxConfig = {
   publicDir: 'public',
   pagesDir: 'content',
   fileExt: '.md',
-  collections: ['/blog', '/projects'],
+  collections: ['/blog'],
   remarkPlugins: [],
   rehypePlugins: [],
 }
@@ -113,18 +115,27 @@ export const mdxConfig = {
  * https://github.com/garmeeh/next-seo
  */
 
+// VERCEL_URL is a bare hostname and is server-only, so production must set
+// NEXT_PUBLIC_SITE_URL for client-rendered head tags to carry the right origin.
+export const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`) ||
+  'http://localhost:3000'
+).replace(/\/$/, '')
+
 export const siteMetaData = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'http://localhost:3000',
+  siteUrl,
   authorName: 'Ararat Tonoyan',
   siteName: 'Ararat Tonoyan',
   defaultTitle: 'Ararat Tonoyan: Blockchain Consultant & Web3 Expert',
   titleTemplate: 'Ararat Tonoyan | %s',
-  description: 'Ararat Tonoyan: Top-rated blockchain consultant, Web3 and Ethereum expert. Providing cutting-edge blockchain development, consultancy, and audit services with a proven track record. Solving complex problems with innovative blockchain solutions.',
+  description:
+    'Ararat Tonoyan: Top-rated blockchain consultant, Web3 and Ethereum expert. Providing cutting-edge blockchain development, consultancy, and audit services with a proven track record. Solving complex problems with innovative blockchain solutions.',
   email: 'hi@tonoyan.dev',
   locale: 'en_US',
+  // Add `handle` and `site` here if a real X/Twitter account exists; without them
+  // next-seo omits twitter:creator/twitter:site rather than shipping placeholders.
   twitter: {
-    handle: '@handle',
-    site: '@site',
     cardType: 'summary_large_image',
   },
 }

@@ -7,16 +7,14 @@ tags:
   - node-js
 images:
   - src: /photos/blog-mastering-secure-password-with-node-js-and-mongoDB.png
-    alt: mastering-secure-password-with-node-js-and-mongoDB
+    alt: Cover illustration for secure password flows with Node.js and MongoDB
 ---
-
-# Mastering Secure Password Flows with Node.js and MongoDB: When Security Becomes an Art!
 
 Greetings, noble guardians of code!
 
 If the thought of your user's password security gives you more chills than the ending of a thriller movie, then you've come to the right place! Sit back, grab your favorite fuel (caffeine is my bet), and let's together navigate the secure waters of password flows with Node.js and MongoDB.
 
-<img src="https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif" alt="Exciting journey ahead" width="500px" />
+<img src="https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif" alt="Setting off on an exciting journey" width="500" height="281" loading="lazy" />
 
 ## Step 1: Picking Your Security Companion
 
@@ -149,7 +147,5 @@ app.post('/login', async (req, res) => {
 ## Closing Thoughts
 
 Remember, folks, when it comes to securing your user's passwords, it's not just about the destination, it's about the journey (and the salt rounds, and the hashed passwords). Let's ensure the safety of our users' data because nothing spoils a user's day more than a data breach!
-
-<img src="https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif" alt="Security is important" width="500px" />
 
 Happy coding!

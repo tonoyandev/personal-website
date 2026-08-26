@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'clsx'
-import Head from 'next/head'
 import Button from '@/components/Button'
 import { BiCoffee } from 'react-icons/bi'
 import { config } from '../theme.config'
@@ -46,16 +45,10 @@ const TipJar = (props) => {
       )}
       {...rest}
     >
-      <Head>
-        <link rel="preconnect" href="https://convertkit.com" />
-        <link rel="dns-prefetch" href="https://convertkit.com" />
-        <link rel="preconnect" href="https://stripe.com" />
-        <link rel="dns-prefetch" href="https://stripe.com" />
-      </Head>
       <p className="my-2 text-black md:m-0">
         Hi there! <strong className="text-black">Want to support my work?</strong>
       </p>
-      <BiCoffee className="mx-4 ml-auto inline hidden text-5xl text-omega-800 md:block" />
+      <BiCoffee className="mx-4 ml-auto hidden text-5xl text-omega-800 md:block" />
       <div>
         <Button size="xs" className="font-bold" data-commerce href={tipUrl}>
           Buy me a coffee

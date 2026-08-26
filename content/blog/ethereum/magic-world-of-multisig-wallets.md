@@ -7,15 +7,13 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-multisig-wallets.png
-    alt: multisig-wallets
+    alt: Cover illustration for multisig wallets on EVM chains
 featured: true
 ---
 
-# A Developer's Guide to Multisig Wallets on EVM Blockchains
-
 Hello, intrepid developers! Today, we're going to dive into the thrilling world of multisig wallets on EVM (Ethereum Virtual Machine) blockchains. These wallets are like your private digital vault, guarded by not just one key (or signature), but multiple! If you're looking to level up your blockchain development skills or add an extra layer of security to your transactions, buckle up! We're in for a wild ride. 🚀
 
-<img src="https://media.giphy.com/media/mi6DsSSNKDbUY/giphy.gif" width="500px" />
+<img src="https://media.giphy.com/media/mi6DsSSNKDbUY/giphy.gif" width="500" height="281" loading="lazy" alt="A bank vault door swinging open" />
 
 ## What is a Multisig Wallet?
 
@@ -183,4 +181,4 @@ Don't forget, with great power comes great responsibility. Always keep your keys
 
 Happy coding! 🚀💻
 
-<img src="https://media.giphy.com/media/Ws6T5PN7wHv3cY8xy8/giphy.gif" width="500px" />
+<img src="https://media.giphy.com/media/Ws6T5PN7wHv3cY8xy8/giphy.gif" width="500" height="300" loading="lazy" alt="A rocket lifting off" />

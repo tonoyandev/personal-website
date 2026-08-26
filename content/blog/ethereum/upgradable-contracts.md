@@ -7,11 +7,9 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-smart-contracts-2.0.png
-    alt: smart-contracts-2.0
+    alt: Cover illustration for upgradable smart contracts
 featured: true
 ---
-# Smart Contracts 2.0: Exploring Upgradable Contracts on Ethereum
-
 Smart contracts are self-executing contracts with the terms of the agreement directly written into code. They exist across a decentralized blockchain network, such as Ethereum. While smart contracts have revolutionized the way we interact with blockchain, their immutability has posed a challenge for developers who need to update or upgrade their contracts. In this article, we will explore the concept of upgradable smart contracts and discuss the advantages, challenges, and solutions associated with this technology.
 
 ## Understanding Upgradable Smart Contracts

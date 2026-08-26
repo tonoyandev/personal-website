@@ -11,15 +11,15 @@ seo:
 name: Ararat Tonoyan
 images:
   - src: /about.jpg
-    alt: my image
+    alt: Ararat Tonoyan working at his desk
 ---
-##### <span>01.</span> Professional Background
+## <span>01.</span> Professional Background
 
 12 years in software engineering. 7 of them building EVM infrastructure that handles real capital.
 
 I work with DeFi protocols in the $10M–$100M+ TVL range, regulated tokenization platforms, and enterprises moving critical financial operations on-chain. On the engineering side, I've led teams from 3 to 15 people — technical direction, delivery standards, hiring, the full thing.
 
-##### <span>02.</span> How I work
+## <span>02.</span> How I work
 
 I spend more time on architecture than on code. At the scale my clients operate, a bad design decision in week one costs more to fix than six months of development. I design modular, upgradeable protocol systems — proxy architectures, diamond patterns, plugin registries — with the assumption that requirements will change and attackers will probe every surface.
 
@@ -27,13 +27,13 @@ Security runs through the process, not at the end. Threat modeling at the whiteb
 
 I own delivery end-to-end: protocol design through post-launch monitoring. I also run the engineering teams that build it — roadmaps, code review standards, incident response, technical hiring.
 
-##### <span>03.</span> Stack & Standards
+## <span>03.</span> Stack & Standards
 
 Solidity · Vyper · ERC-4626 · ERC-4337 · ERC-2535 · Safe · OpenZeppelin · Uniswap V3/V4 · Aave V3 · Chainlink CCIP · LayerZero · EigenLayer · Foundry · Echidna · Certora · Tenderly · The Graph
 
 <b>Networks</b>: Ethereum · Arbitrum · Optimism · Base · Polygon · zkSync Era · Linea · Scroll
 
-##### <span>04.</span> What I take on
+## <span>04.</span> What I take on
 
 Greenfield protocol architecture and system design for DeFi, RWA, and institutional on-chain products. Security reviews, threat modeling, and pre-audit remediation — including audit coordination and architectural revisions when findings go deeper than a patch. Cross-chain interoperability design across EVM networks. Legacy contract migration and upgrade strategy for live production systems. Technical leadership and team buildout for organizations that need a senior engineering layer, not just a contractor.
 

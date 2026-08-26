@@ -7,15 +7,13 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-optimising-solidity-code.png
-    alt: optimising-solidity-code
+    alt: Cover illustration for optimising Solidity code
 featured: true
 ---
 
-## Optimising Solidity Code: How to Get It Right
-
 Welcome again to the world of Solidity, where every gas unit saved is a victory. But how does one ensure that their Solidity code is optimised, clean, and gas-efficient? In this article, we will delve into some key concepts and practices to do just that, while sticking closely to the Solidity Style Guide. Grab a cup of coffee and let's get started!
 
-#### The Art of Variable Declaration
+## The Art of Variable Declaration
 
 Variables are the backbone of your code. Handle with care, or you'll pay the price (literally) in gas.
 
@@ -41,7 +39,7 @@ function getContractAddress() external view returns (address) {
 ```
 By making variables internal or private and creating specific getter functions, you limit external access, potentially saving gas.
 
-#### Refining the Use of Structs
+## Refining the Use of Structs
 
 Structs should be sleek and efficient. The right order can save you from gas wastage.
 
@@ -65,7 +63,7 @@ struct GoodExample {
 ```
 Placing variables in descending order by size ensures efficient storage use, saving on gas.
 
-#### Mastering Loops
+## Mastering Loops
 
 Just like in a symphony, every loop in Solidity needs to hit the right note to avoid any dissonance.
 
@@ -86,7 +84,7 @@ for (uint256 i = 0; i < len; i++) {
 ```
 By storing the array length in memory, you can save gas since memory reading is cheaper than storage reading.
 
-#### Elevating Function Calls
+## Elevating Function Calls
 
 Functions are the lifeblood of your contract. Ensure they flow well without bleeding gas unnecessarily.
 
@@ -116,7 +114,7 @@ function _complexCalculation() internal returns (uint256) {
 ```
 By making function calls internal when possible, you can save gas since they don't create a new EVM (Ethereum Virtual Machine) context.
 
-#### Embracing Libraries
+## Embracing Libraries
 
 Libraries are a gift, make sure to unwrap them.
 
@@ -139,7 +137,7 @@ contract MyContract {
 ```
 Utilizing well-tested libraries not only provides gas optimization but also prevents potential bugs and vulnerabilities.
 
-#### Efficient Use of Events
+## Efficient Use of Events
 
 Events can provide important insights but shouldn't be used excessively. 
 
@@ -165,7 +163,7 @@ function emitEventIfNeeded(uint256 _value) public {
 ```
 Emitting events conditionally can save gas when the conditions aren't met.
 
-#### Reduce Redundant Variable Assignments
+## Reduce Redundant Variable Assignments
 
 Assigning and storing unnecessary variables can increase gas costs.
 
@@ -188,7 +186,7 @@ function setBar(uint256 _value) public {
 ```
 By eliminating redundant assignments, you save gas.
 
-#### Short-circuiting in Conditionals
+## Short-circuiting in Conditionals
 
 By ordering conditions appropriately, we can optimize the code for gas usage.
 
@@ -208,7 +206,7 @@ if (simpleOperation() && complexOperation()) {
 ```
 By performing the simple operation first, we can short-circuit the condition if it's false, saving gas.
 
-#### Avoiding Expensive Operations
+## Avoiding Expensive Operations
 
 Operations like `SSTORE` and `SLOAD` are quite expensive and should be avoided when possible.
 
@@ -237,7 +235,7 @@ function cheaperOperation() public {
 ```
 By minimizing storage operations, you can save a considerable amount of gas.
 
-#### Caching Contract Addresses
+## Caching Contract Addresses
 
 Reading external contract addresses from the blockchain is expensive.
 
@@ -262,7 +260,7 @@ Caching external contract instances can help to reduce gas costs significantly.
 
 Absolutely! Here are five more points for Solidity code optimization:
 
-#### Utilize Bitwise Shifting Over Multiplication/Division
+## Utilize Bitwise Shifting Over Multiplication/Division
 
 Using bitwise shifting can save gas over traditional multiplication or division.
 
@@ -288,7 +286,7 @@ function cheaperCalculation() public {
 ```
 Bitwise shifting can serve as a cheaper alternative for multiplying or dividing by powers of 2.
 
-#### Take Advantage of Function Modifiers
+## Take Advantage of Function Modifiers
 
 Proper use of function modifiers can simplify code and save gas.
 
@@ -314,7 +312,7 @@ function performAction() public onlyOwner {
 ```
 By using function modifiers, we can streamline common checks, making the code cleaner and more gas-efficient.
 
-#### Optimize Array Usage
+## Optimize Array Usage
 
 Managing array size and eliminating redundancy can save significant gas.
 
@@ -346,7 +344,7 @@ function removeFromArray(uint256 index) public {
 ```
 By deleting an element, we leave a "gap" in the array which consumes less gas than resizing the array.
 
-#### Favor `bytes32` Over `string`
+## Favor `bytes32` Over `string`
 
 `bytes32` consumes less gas compared to `string` for smaller, fixed-sized strings.
 
@@ -362,7 +360,7 @@ bytes32 public _name = "Bob";
 ```
 `bytes32` is a fixed-size type and is cheaper to use when appropriate.
 
-#### Leverage Delegatecall
+## Leverage Delegatecall
 
 Using `delegatecall` helps keep call data within the context of the calling contract, thus saving gas.
 

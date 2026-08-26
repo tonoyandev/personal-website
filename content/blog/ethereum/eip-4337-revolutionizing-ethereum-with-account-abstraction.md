@@ -7,15 +7,13 @@ tags:
   - ethereum
 images:
   - src: /photos/blog-eip-4337.png
-    alt: eip-4337
+    alt: Cover illustration for EIP-4337 account abstraction on Ethereum
 featured: true
 ---
 
-### EIP-4337 - Account Abstraction: Your Ticket to EVM Blockchains Amusement Park**
-
 Hello, code magicians of the Blockchain realm! Don your wizard's hat and grab your wand (keyboard), because we're about to delve into the bewitching intricacies of EIP-4337, Ethereum's new Account Abstraction proposal. Spoiler alert: it's going to be a wild ride!
 
-<img src="https://media.giphy.com/media/l0HlvtIPzPdt2usKs/giphy.gif" width="500px" alt="" />
+<img src="https://media.giphy.com/media/l0HlvtIPzPdt2usKs/giphy.gif" width="500" height="300" loading="lazy" alt="A wizard casting a spell" />
 
 **Once Upon A Time In The EVM World...**
 
@@ -27,7 +25,7 @@ But then came EIP-4337, and suddenly everyone was invited to the party.
 
 EIP-4337, or Account Abstraction as it's more commonly known, flips the narrative on its head. It introduces a new transaction type, allowing contract accounts to pay gas fees and initiate transactions. This is more than just a small evolution; it's like our nerds have suddenly discovered they're superheroes!
 
-<img src="https://media.giphy.com/media/RX3vhj311HKLe/giphy.gif" width="500px" alt="" />
+<img src="https://media.giphy.com/media/RX3vhj311HKLe/giphy.gif" width="500" height="208" loading="lazy" alt="A nerd transforming into a superhero" />
 
 **Why Account Abstraction?**
 
@@ -54,7 +52,7 @@ await initiatorContract.send(transaction);
 
 This revolutionary concept allows contracts to have a life of their own, offering a whole new level of automation and interaction possibilities.
 
-<img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="500px" alt="" />
+<img src="https://media.giphy.com/media/YQitE4YNQNahy/giphy.gif" width="500" height="281" loading="lazy" alt="A robot springing to life on its own" />
 
 **EIP-4337 Mechanics – The Lowdown**
 

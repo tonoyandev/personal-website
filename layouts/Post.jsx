@@ -32,9 +32,13 @@ const Layout = ({
         type="BlogPosting"
         url={pageUrl}
         title={title}
-        images={images.map((img) => siteUrl + img.src)}
+        images={
+          images.length ? images.map((img) => siteUrl + img.src) : [`${siteUrl}/og-default.png`]
+        }
         datePublished={date}
         authorName={authorName}
+        publisherName={siteMetaData.siteName}
+        publisherLogo={`${siteUrl}/favicon/android-chrome-512x512.png`}
         description={seo?.description || description}
       />
       <div className="relative mx-auto my-auto w-full p-4 pb-20 lg:p-20">
@@ -55,9 +59,10 @@ const Layout = ({
               <div className="not-prose mx-6 box-content h-24 w-24 overflow-hidden rounded-full border-4 border-alpha bg-alpha">
                 <Image
                   src={authorImage}
-                  alt="Picture of the author"
+                  alt={`Portrait of ${authorName}`}
                   animation="fade-in"
                   className="rounded-full object-cover"
+                  sizes="96px"
                   priority
                   fill
                 />
@@ -71,7 +76,7 @@ const Layout = ({
           {attributes.length > 0 && (
             <div className="dark:bg-gradient-omega-900 mt-12 md:dark:shadow-2xl">
               <Sep line />
-              <dl className="grid grid-cols-fluid gap-4 p-4 [--tw-fluid-col-min:8rem] md:gap-6 md:py-6 md:px-12">
+              <dl className="grid grid-cols-fluid gap-4 p-4 [--tw-fluid-col-min:8rem] md:gap-6 md:px-12 md:py-6">
                 {attributes.map(({ label, value }) => (
                   <div key={label}>
                     <dt className="mb-2 dark:text-alpha">{label}</dt>

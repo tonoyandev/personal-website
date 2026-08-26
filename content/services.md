@@ -11,12 +11,12 @@ seo:
 ---
 
 <PageTitle>
-  ### Services
+  # Services
 </PageTitle>
 
 I build and secure the systems that serious on-chain products run on. No generalist work — every engagement is scoped around architecture, security, or engineering leadership at the protocol level.
 
-###### What I deliver
+## What I deliver
 
 - Protocol architecture and system design
 - Smart contract development
@@ -24,7 +24,7 @@ I build and secure the systems that serious on-chain products run on. No general
 - Penetration testing
 - Team leadership and technical buildout
 
-###### Stack
+## Stack
 
 Solidity · Vyper · Node.js · React · TypeScript · Foundry · Hardhat · Echidna · Slither · Certora · The Graph · Chainlink · LayerZero · OpenZeppelin · Safe
 

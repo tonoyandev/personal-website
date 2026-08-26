@@ -2,7 +2,7 @@
 layout: Blog
 seo:
   title: My Blog
-  description: Blog page
+  description: Articles on Ethereum, smart contract security, Solidity gas optimisation and Node.js engineering — written from production experience by Ararat Tonoyan.
 collection:
   path: /blog
   sortBy: date
@@ -10,7 +10,7 @@ collection:
   infinitePaging: true
 ---
 
-### Latest Articles
+# Latest Articles
 
 A few handcrafted articles about my thoughts and experiments.
 
@@ -22,6 +22,6 @@ collection:
   shallow: true
 ---
 
-### Categories
+## Categories
 
 <small>I write about web development and modern JavaScript frameworks.</small>

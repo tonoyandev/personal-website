@@ -7,28 +7,23 @@ const Typewriter = (props) => {
     children,
     className,
     lineClassName,
-    as = 'div',
+    as = 'span',
     lines = [],
     interval = 3000,
     withIcon = true,
     ...rest
   } = props
 
-  const [index, setIndex] = React.useState(null)
+  // Starts at the first line so the text is present in the server-rendered HTML:
+  // the CSS animation does the typing, rather than mounting the text after a delay.
+  const [index, setIndex] = React.useState(0)
 
   React.useEffect(() => {
-    if (lines.length < 1 && !children) return
-
     const linesLength = children ? 1 : lines.length
+    if (linesLength < 2) return
 
-    if (linesLength === 1) {
-      setTimeout(() => setIndex(0), 1500)
-    }
-
-    if (linesLength > 1) {
-      const intervalID = setInterval(() => setIndex((i) => (i + 1) % linesLength), interval)
-      return () => clearInterval(intervalID)
-    }
+    const intervalID = setInterval(() => setIndex((i) => (i + 1) % linesLength), interval)
+    return () => clearInterval(intervalID)
   }, [lines, children, interval])
 
   const Component = as
@@ -41,14 +36,19 @@ const Typewriter = (props) => {
       <span
         key={index}
         className={classNames(
-          'animate-typewriter overflow-hidden whitespace-nowrap',
+          'animate-typewriter overflow-hidden whitespace-nowrap motion-reduce:animate-none',
           lineClassName
         )}
         {...rest}
       >
-        {index !== null && (lines[index] || children)}
+        {lines[index] || children}
       </span>
-      <div className="ml-2 -translate-y-2 animate-blink">_</div>
+      <span
+        aria-hidden="true"
+        className="ml-2 -translate-y-2 animate-blink motion-reduce:animate-none"
+      >
+        _
+      </span>
     </Component>
   )
 }
