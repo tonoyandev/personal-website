@@ -1,0 +1,8 @@
+# Never upload local build output or agent scratch state to Vercel.
+# Vercel builds from source; shipping .next/cache also bloats function bundles.
+.next
+.claude
+node_modules
+.git
+.env
+.env.local
